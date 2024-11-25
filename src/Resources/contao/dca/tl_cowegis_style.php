@@ -142,7 +142,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_style'] = [
             'exclude'   => true,
             'inputType' => 'text',
             'wizard'    => [
-                ['netzmacht.contao_toolkit.dca.listeners.color_picker', 'handleWizardCallback'],
+                ['netzmacht.contao_toolkit.dca.listeners.color_picker', 'onWizardCallback'],
             ],
             'eval'      => [
                 'tl_class'       => 'w50 wizard clr',
@@ -175,7 +175,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_style'] = [
             'exclude'   => true,
             'inputType' => 'text',
             'wizard'    => [
-                ['netzmacht.contao_toolkit.dca.listeners.color_picker', 'handleWizardCallback'],
+                ['netzmacht.contao_toolkit.dca.listeners.color_picker', 'onWizardCallback'],
             ],
             'eval'      => [
                 'tl_class'       => 'clr w50 wizard',
