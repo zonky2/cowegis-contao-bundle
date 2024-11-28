@@ -1,6 +1,6 @@
-# cowegis - Content Web GIS Core
+# cowegis - Contao bundle
 
-This is the core libary of the cowegis project
+This is the Contao bundle of the cowegis project. This bundle installs the typical packages for the use of cowegis.
 
 ## Requirements
 
