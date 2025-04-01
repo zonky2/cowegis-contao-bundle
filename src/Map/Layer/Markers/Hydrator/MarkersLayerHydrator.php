@@ -10,6 +10,7 @@ use Cowegis\Bundle\Contao\Model\LayerModel;
 use Cowegis\Bundle\Contao\Provider\LayerDataProvider;
 use Cowegis\Bundle\Contao\Provider\MapLayerContext;
 use Cowegis\Core\Definition\Expression\InlineExpression;
+use Cowegis\Core\Definition\GeoData\InlineGeoJsonData;
 use Cowegis\Core\Definition\GeoData\UriData;
 use Cowegis\Core\Definition\Layer\DataLayer;
 use Cowegis\Core\Definition\Layer\Layer;
@@ -81,6 +82,6 @@ final class MarkersLayerHydrator extends LayerTypeHydrator
             return;
         }
 
-        $layer->withData($this->serializer->serialize($layerData));
+        $layer->withData(new InlineGeoJsonData($this->serializer->serialize($layerData)));
     }
 }
