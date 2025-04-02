@@ -67,7 +67,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_icon'] = [
                     . '\'))return false;Backend.getScrollOffset()"',
             ],
             'toggle' => [
-                'icon'            => 'visible.gif',
+                'icon'            => 'visible.svg',
                 'attributes'      => 'onclick="Backend.getScrollOffset();return AjaxRequest.toggleVisibility(this,%s)"',
                 'button_callback' => [StateButtonCallbackListener::class, 'onButtonCallback'],
                 'toolkit'         => [
@@ -76,7 +76,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_icon'] = [
             ],
             'show'   => [
                 'href' => 'act=show',
-                'icon' => 'show.gif',
+                'icon' => 'show.svg',
             ],
         ],
     ],

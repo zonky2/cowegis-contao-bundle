@@ -44,35 +44,35 @@ $GLOBALS['TL_DCA']['tl_cowegis_layer'] = [
         'operations'        => [
             'data'   => [
                 'href' => '',
-                'icon' => 'edit.svg',
+                'icon' => 'children.svg',
             ],
             'edit'   => [
                 'label' => &$GLOBALS['TL_LANG']['tl_cowegis_layer']['edit'],
                 'href'  => 'act=edit',
-                'icon'  => 'header.gif',
+                'icon'  => 'edit.svg',
             ],
             'copy'   => [
                 'label' => &$GLOBALS['TL_LANG']['tl_cowegis_layer']['copy'],
                 'href'  => 'act=copy',
-                'icon'  => 'copy.gif',
+                'icon'  => 'copy.svg',
             ],
             'cut'    => [
                 'label'      => &$GLOBALS['TL_LANG']['tl_cowegis_layer']['cut'],
                 'href'       => 'act=paste&amp;mode=cut',
-                'icon'       => 'cut.gif',
+                'icon'       => 'cut.svg',
                 'attributes' => 'onclick="Backend.getScrollOffset()"',
             ],
             'delete' => [
                 'label'      => &$GLOBALS['TL_LANG']['tl_cowegis_layer']['delete'],
                 'href'       => 'act=delete',
-                'icon'       => 'delete.gif',
+                'icon'       => 'delete.svg',
                 'attributes' => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? '')
                     . '\'))return false;Backend.getScrollOffset()"',
             ],
             'show'   => [
                 'label' => &$GLOBALS['TL_LANG']['tl_cowegis_layer']['show'],
                 'href'  => 'act=show',
-                'icon'  => 'show.gif',
+                'icon'  => 'show.svg',
             ],
         ],
     ],

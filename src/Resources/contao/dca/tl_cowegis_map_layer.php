@@ -50,7 +50,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_map_layer'] = [
         'operations' => [
             'show' => [
                 'href' => 'act=show',
-                'icon' => 'show.gif',
+                'icon' => 'show.svg',
             ],
         ],
     ],

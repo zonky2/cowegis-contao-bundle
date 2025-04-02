@@ -42,7 +42,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_map'] = [
         'operations'        => [
             'edit'     => [
                 'href'       => 'act=edit',
-                'icon'       => 'header.gif',
+                'icon'       => 'edit.svg',
                 'attributes' => 'accesskey="e"',
             ],
             'layers'   => [
@@ -62,16 +62,16 @@ $GLOBALS['TL_DCA']['tl_cowegis_map'] = [
             ],
             'copy'     => [
                 'href' => 'act=copy',
-                'icon' => 'copy.gif',
+                'icon' => 'copy.svg',
             ],
             'delete'   => [
-                'icon'       => 'delete.gif',
+                'icon'       => 'delete.svg',
                 'attributes' => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? '')
                     . '\'))return false;Backend.getScrollOffset()"',
             ],
             'show'     => [
                 'href' => 'act=show',
-                'icon' => 'show.gif',
+                'icon' => 'show.svg',
             ],
         ],
     ],
