@@ -84,7 +84,7 @@ final class MarkerHydrator extends ConfigurableOptionsHydrator
 
     private function hydratePopup(MarkerModel $markerModel, Marker $definition, Context $context): void
     {
-        if ($markerModel->addPopup !== false) {
+        if ((bool) $markerModel->addPopup === false) {
             return;
         }
 
@@ -102,7 +102,7 @@ final class MarkerHydrator extends ConfigurableOptionsHydrator
 
     private function hydrateTooltip(MarkerModel $markerModel, Marker $definition, Context $context): void
     {
-        if ($markerModel->addTooltip !== false) {
+        if ((bool) $markerModel->addTooltip === false) {
             return;
         }
 
