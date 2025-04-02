@@ -32,7 +32,7 @@ final class TileLayerType implements LayerType
     {
         $url = parse_url((string) $row['tileUrl'], PHP_URL_HOST);
         if (is_string($url)) {
-            $url    = preg_replace('#\{s\}\.#', '', $url);
+            $url    = (string) preg_replace('#\{s\}\.#', '', $url);
             $label .= sprintf(' <span class="tl_gray">(%s)</span>', $url);
         }
 

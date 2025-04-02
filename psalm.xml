@@ -27,12 +27,6 @@
                 <referencedProperty name="Contao\DataContainer::$activeRecord"/>
             </errorLevel>
         </UndefinedMagicPropertyFetch>
-        
-        <DeprecatedClass>
-            <errorLevel type="suppress">
-                <referencedClass name="Contao\Template"/>
-            </errorLevel>
-        </DeprecatedClass>
     </issueHandlers>
 
     <universalObjectCrates>
