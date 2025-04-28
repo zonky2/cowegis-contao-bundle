@@ -60,9 +60,9 @@ abstract class MapFragmentAction extends AbstractHybridController
      */
     protected function prepareTemplateData(array $data, Request $request, Model $model): array
     {
-        $data['mapStyle']     = $this->compileMapStyle($model);
-        $data['definitionId'] = $this->getIdentifier($model, $this->getDefaultIdentifier($model));
-        $data['clientJs']     = $this->getClientJs($model);
+        $data['mapStyle']  = $this->compileMapStyle($model);
+        $data['mapId']     = $this->getIdentifier($model, $this->getDefaultIdentifier($model));
+        $data['clientJs']  = $this->getClientJs($model);
 
         try {
             $data['mapUri'] = $this->router->generate(
@@ -101,8 +101,8 @@ abstract class MapFragmentAction extends AbstractHybridController
     // phpcs:disable Squiz.NamingConventions.ValidVariableName.NotCamelCaps
     private function getDefaultIdentifier(Model $model): string|null
     {
-        if ($model->cowegis_map_cssId) {
-            return (string) $model->cowegis_map_cssId;
+        if ($model->cowegis_mapId) {
+            return (string) $model->cowegis_mapId;
         }
 
         $cssId = StringUtil::deserialize($model->cssID, true);
