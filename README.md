@@ -1,4 +1,4 @@
-# cowegis - Contao bundle
+# cowegis - Content Web GIS Contao bundle
 
 This is the Contao bundle of the cowegis project. This bundle installs the typical packages for the use of cowegis.
 
