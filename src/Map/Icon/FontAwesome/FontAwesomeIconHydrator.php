@@ -16,7 +16,7 @@ final class FontAwesomeIconHydrator extends IconTypeHydrator
         'bgColor'   => 'backgroundColor',
         'color'     => 'iconColor',
         'className' => 'className',
-        'faIconSet' => 'iconSet',
+        'iconSet'   => 'faIconSet',
         'icon'      => 'icon',
     ];
 
