@@ -11,10 +11,10 @@ final class SvgIconHydrator extends IconTypeHydrator
 {
     /** @var list<string>|array<string,string> */
     protected static array $options = [
-        'backgroundColor' => 'backgroundColor',
-        'iconColor'       => 'iconColor',
-        'className'       => 'className',
-        'html'            => 'content',
+        'bgColor'   => 'backgroundColor',
+        'color'     => 'iconColor',
+        'className' => 'className',
+        'html'      => 'content',
     ];
 
     /** @var list<string>|array<string,string> */
