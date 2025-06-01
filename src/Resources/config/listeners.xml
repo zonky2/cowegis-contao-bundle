@@ -107,6 +107,7 @@
         <service id="Cowegis\Bundle\Contao\EventListener\Dca\IconDcaListener" public="true">
             <argument type="service" id="Cowegis\Bundle\Contao\Map\Icon\IconTypeRegistry" />
             <tag name="contao.callback" table="tl_cowegis_icon" target="fields.type.options" method="iconOptions" />
+            <tag name="contao.callback" table="tl_cowegis_layer" target="fields.amenityIcons.eval.columnFields.icon.options" method="iconOptions" />
         </service>
 
         <service id="Cowegis\Bundle\Contao\EventListener\Dca\ControlDcaListener" public="true">
