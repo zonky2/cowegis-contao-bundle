@@ -68,11 +68,12 @@ final class OverpassLayerHydrator extends LayerTypeHydrator
         $amenityIconsMap    = [];
 
         foreach ($amenityIconsConfig as $config) {
-            if (! $config['amenity'] || ! $config['icon']) {
+            if (!$config['amenity'] || !$config['icon']) {
                 continue;
             }
 
-            $amenityIconsMap[$config['amenity']] = IconId::fromValue(IntegerDefinitionId::fromValue($config['icon']));
+            $amenityIconsMap[$config['amenity']] =
+                IconId::fromValue(IntegerDefinitionId::fromValue((int) $config['icon']));
         }
 
         return $amenityIconsMap;
