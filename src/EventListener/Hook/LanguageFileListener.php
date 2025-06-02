@@ -20,7 +20,7 @@ final class LanguageFileListener
 
     public function __invoke(string $name, string $currentLanguage): void
     {
-        if (strpos($name, 'tl_cowegis_') !== 0) {
+        if (! str_starts_with($name, 'tl_cowegis_')) {
             return;
         }
 
