@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+// Legends
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['title_legend']  = 'Layer';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['active_legend'] = 'Activation';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['expert_legend'] = 'Expert settings';
@@ -9,6 +10,7 @@ $GLOBALS['TL_LANG']['tl_cowegis_layer']['config_legend'] = 'Configuration';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['style_legend']  = 'Style';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['marker_legend'] = 'Marker settings';
 
+// Fields
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['map'][0]    = 'Manage maps';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['map'][1]    = 'Manage leaflet maps';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['icons'][0]  = 'Manage icons';
@@ -53,7 +55,7 @@ $GLOBALS['TL_LANG']['tl_cowegis_layer']['groupType'][1]                  = 'Choo
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['onEachFeature'][0]              = 'onEachFeature expression';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['onEachFeature'][1]              = 'Use a custom onEachFeature expression. Can be a anonymous function or method reference. If defined the extension does not handle popup adding for you.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['pointToLayer'][0]               = 'pointToLayer expression';
-$GLOBALS['TL_LANG']['tl_cowegis_layer']['pointToLayer'][1]               = 'Use a custom pointToLayer expression. Can be a anonymous function or method reference. If defined the extension does not handle popup or icon adding for you.';
+$GLOBALS['TL_LANG']['tl_cowegis_layer']['pointToLayer'][1]               = 'Use a custom <a href="https://leafletjs.com/reference.html#geojson">pointToLayer expression</a>. Can be a anonymous function or method reference. If defined the extension does not handle popup or icon adding for you.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['showCoverageOnHover'][0]        = 'Show coverage on hover';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['showCoverageOnHover'][1]        = 'When you mouse over a cluster it shows the bounds of its markers.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['zoomToBoundsOnClick'][0]        = 'Zoom to bounds on click';
@@ -88,7 +90,7 @@ $GLOBALS['TL_LANG']['tl_cowegis_layer']['maxNativeZoom'][0]              = 'Maxi
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['maxNativeZoom'][1]              = 'Maximum zoom number the tiles source has available. If it is specified, the tiles on all zoom levels higher than maxNativeZoom will be loaded from maxZoom level and auto-scaled.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['tileSize'][0]                   = 'Tile size';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['tileSize'][1]                   = 'Tile size (width and height in pixels, assuming tiles are square).';
-$GLOBALS['TL_LANG']['tl_cowegis_layer']['tileUrl'][0]                    = 'Url template';
+$GLOBALS['TL_LANG']['tl_cowegis_layer']['tileUrl'][0]                    = 'URL template';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['tileUrl'][1]                    = 'A string of the following form: <em>http://{s}.somedomain.com/blabla/{z}/{x}/{y}{r}.png</em>. More information see <a href="https://leafletjs.com/reference.html#tilelayer" target="_blank">https://leafletjs.com/reference.html#tilelayer</a>';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['subdomains'][0]                 = 'Subdomains';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['subdomains'][1]                 = 'Subdomains of the tile service. Each letter is handled as a subdomain.';
@@ -107,7 +109,7 @@ $GLOBALS['TL_LANG']['tl_cowegis_layer']['zoomOffset'][1]                 = 'The 
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['zoomReverse'][0]                = 'Reserve zoom';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['zoomReverse'][1]                = 'If set to true, the zoom number used in tile URLs will be reversed';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['opacity'][0]                    = 'Opacity';
-$GLOBALS['TL_LANG']['tl_cowegis_layer']['opacity'][1]                    = 'The opacity of the tile layer.';
+$GLOBALS['TL_LANG']['tl_cowegis_layer']['opacity'][1]                    = 'The opacity of the tile layer - 0 is completely translucent and 1 is completely visible.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['zIndex'][0]                     = 'zIndex';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['zIndex'][1]                     = 'The explicit zIndex of the tile layer. Not set by default.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['unloadvisibleTiles'][0]         = 'Unload not visible tiles';
