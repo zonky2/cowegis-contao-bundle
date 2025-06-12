@@ -157,6 +157,8 @@ $GLOBALS['TL_LANG']['tl_cowegis_layer']['zIndexOffset'][0]               = 'zInd
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['zIndexOffset'][1]               = 'Standardmäßig wird der zIndex der Markierungen automatisch auf der Grundlage des Breitengrads festgelegt. Verwenden Sie diese Option, wenn Sie die Markierung über (oder unter) alle anderen setzen möchten, und geben Sie einen hohen Wert wie 1000 (bzw. einen hohen negativen Wert) an.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['riseOnHover'][0]                = 'Hervorheben bei Hover';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['riseOnHover'][1]                = 'Wenn aktiv, wird die Markierung bei einem Maus-Hover über die anderen Markierungen gesetzt.';
+$GLOBALS['TL_LANG']['tl_cowegis_layer']['riseOffset'][0]                 = 'Offset zum Hervorheben';
+$GLOBALS['TL_LANG']['tl_cowegis_layer']['riseOffset'][1]                 = 'Der Wert wird zu dem aktuellen zIndex hinzugezählt, um den Marker hervorzuheben.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['pointToLayer'][0]               = 'pointToLayer Funktion';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['pointToLayer'][1]               = 'Benutzung einer eigenen <a href="https://leafletjs.com/reference.html#geojson">pointToLayer Funktion</a>. Das kann eine anonyme Funktion oder eine Referenz zu einer Methode sein. Falls definiert, übernimmt die Erweiterung nicht das Hinzufügen von Popups oder Icons.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['tileUrl'][0]                    = 'URL Template';

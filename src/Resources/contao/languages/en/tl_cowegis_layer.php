@@ -158,6 +158,8 @@ $GLOBALS['TL_LANG']['tl_cowegis_layer']['zIndexOffset'][0]               = 'zInd
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['zIndexOffset'][1]               = 'By default, marker images zIndex is set automatically based on its latitude. Use this option if you want to put the marker on top of all others (or below), specifying a high value like 1000 (or high negative value, respectively).';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['riseOnHover'][0]                = 'Rise on hover';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['riseOnHover'][1]                = 'If true, the marker will get on top of others when you hover the mouse over it.';
+$GLOBALS['TL_LANG']['tl_cowegis_layer']['riseOffset'][0]                 = 'Rise offset';
+$GLOBALS['TL_LANG']['tl_cowegis_layer']['riseOffset'][1]                 = 'The value is added to the current zIndex to rise the marker.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['vectors'][0]                    = 'Vectors';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['vectors'][1]                    = 'Vectors data as valid GEOJSON.';
 
