@@ -16,6 +16,7 @@ use Doctrine\DBAL\Connection;
 use MenAtWork\MultiColumnWizardBundle\Contao\Widgets\MultiColumnWizard;
 use Netzmacht\Contao\Toolkit\Dca\Listener\AbstractListener;
 use Netzmacht\Contao\Toolkit\Dca\Manager as DcaManager;
+use Override;
 
 use function array_map;
 use function time;
@@ -32,6 +33,7 @@ final class ControlDcaListener extends AbstractListener
         parent::__construct($dcaManager);
     }
 
+    #[Override]
     public static function getName(): string
     {
         return 'tl_cowegis_control';

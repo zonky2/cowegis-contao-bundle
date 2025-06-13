@@ -13,6 +13,7 @@ use Cowegis\Bundle\Contao\Provider\MapLayerContext;
 use Cowegis\Core\Definition\Layer\Layer;
 use Cowegis\Core\Definition\Layer\LayerGroup;
 use Netzmacht\Contao\Toolkit\Response\ResponseTagger;
+use Override;
 
 use function assert;
 
@@ -23,6 +24,7 @@ class GroupLayerHydrator extends LayerTypeHydrator
         parent::__construct($responseTagger);
     }
 
+    #[Override]
     protected function hydrateLayer(
         LayerModel $layerModel,
         Layer $layer,
@@ -38,6 +40,7 @@ class GroupLayerHydrator extends LayerTypeHydrator
         }
     }
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'group';

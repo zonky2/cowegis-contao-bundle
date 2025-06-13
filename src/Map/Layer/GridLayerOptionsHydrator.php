@@ -9,6 +9,7 @@ use Cowegis\Core\Definition\DefinitionId\IntegerDefinitionId;
 use Cowegis\Core\Definition\Layer\GridLayer;
 use Cowegis\Core\Definition\Map\PaneId;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function assert;
 
@@ -30,6 +31,7 @@ final class GridLayerOptionsHydrator extends LayerOptionsHydrator
         'keepBuffer',
     ];
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         parent::hydrate($data, $definition, $context, $hydrator);
@@ -43,6 +45,7 @@ final class GridLayerOptionsHydrator extends LayerOptionsHydrator
         $definition->options()->set('pane', new PaneId(new IntegerDefinitionId((int) $data->pane)));
     }
 
+    #[Override]
     public function supports(object $data, object $definition): bool
     {
         if (! parent::supports($data, $definition)) {

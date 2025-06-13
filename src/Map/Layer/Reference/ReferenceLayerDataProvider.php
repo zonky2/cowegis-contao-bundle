@@ -10,6 +10,7 @@ use Cowegis\Bundle\Contao\Provider\LayerDataProvider;
 use Cowegis\Bundle\Contao\Provider\MapLayerContext;
 use Cowegis\Core\Exception\RuntimeException;
 use Cowegis\Core\Provider\LayerData;
+use Override;
 use Psr\Container\ContainerInterface;
 
 use function assert;
@@ -22,6 +23,7 @@ final class ReferenceLayerDataProvider implements LayerDataProvider
     ) {
     }
 
+    #[Override]
     public function findLayerData(LayerModel $layerModel, MapLayerContext $context): LayerData
     {
         if ($layerModel->type !== 'reference') {

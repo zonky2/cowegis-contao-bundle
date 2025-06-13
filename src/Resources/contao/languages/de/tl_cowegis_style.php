@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -7,10 +8,6 @@ declare(strict_types=1);
  *
  * @link    http://help.transifex.com/intro/translating.html
  * @link    https://www.transifex.com/projects/p/contao-leaflet-maps/language/de/
- *
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
- *
- * last-updated: 2017-10-17T16:04:07+00:00
  */
 
 $GLOBALS['TL_LANG']['tl_leaflet_style']['active_legend']    = 'Aktivierung';
@@ -60,4 +57,3 @@ $GLOBALS['TL_LANG']['tl_leaflet_style']['type']['0']        = 'Typ';
 $GLOBALS['TL_LANG']['tl_leaflet_style']['type']['1']        = 'Wählen Sie den Typ des Stils aus.';
 $GLOBALS['TL_LANG']['tl_leaflet_style']['weight']['0']      = 'Linienbreite';
 $GLOBALS['TL_LANG']['tl_leaflet_style']['weight']['1']      = 'Strichbreite in Pixeln';
-

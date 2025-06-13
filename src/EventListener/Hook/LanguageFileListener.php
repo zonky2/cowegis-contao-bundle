@@ -8,7 +8,7 @@ use Contao\CoreBundle\Framework\Adapter;
 use Contao\CoreBundle\ServiceAnnotation\Hook;
 use Contao\System;
 
-use function strpos;
+use function str_starts_with;
 
 /** @Hook("loadLanguageFile") */
 final class LanguageFileListener

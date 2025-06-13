@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Cowegis\Bundle\Contao\Map\GeoData;
 
 use Cowegis\Core\Definition\GeoData\GeoData;
+use Override;
 
 final class RawGeoJsonGeoData implements GeoData
 {
@@ -13,6 +14,7 @@ final class RawGeoJsonGeoData implements GeoData
     }
 
     /** @return array<string, mixed> */
+    #[Override]
     public function jsonSerialize(): array
     {
         return [

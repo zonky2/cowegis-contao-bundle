@@ -15,6 +15,7 @@ use Cowegis\Core\Definition\DefinitionId\IntegerDefinitionId;
 use Cowegis\Core\Definition\Layer\Layer;
 use Cowegis\Core\Definition\Map\MapId;
 use Cowegis\Core\Exception\LayerNotFound;
+use Override;
 use RuntimeException;
 
 final class ReferenceLayerType implements LayerType, LayerTypeRegistryAware
@@ -27,16 +28,19 @@ final class ReferenceLayerType implements LayerType, LayerTypeRegistryAware
     {
     }
 
+    #[Override]
     public function setRegistry(LayerTypeRegistry $layerTypes): void
     {
         $this->layerTypes = $layerTypes;
     }
 
+    #[Override]
     public function name(): string
     {
         return 'reference';
     }
 
+    #[Override]
     public function createDefinition(LayerModel $layerModel, MapLayerModel $mapLayerModel): Layer
     {
         if (! $this->layerTypes instanceof LayerTypeRegistry) {
@@ -55,6 +59,7 @@ final class ReferenceLayerType implements LayerType, LayerTypeRegistryAware
     }
 
     /** {@inheritDoc} */
+    #[Override]
     public function label(string $label, array $row): string
     {
         $reference = $this->layerRepository->find((int) $row['reference']);

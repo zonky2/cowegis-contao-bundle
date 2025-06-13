@@ -62,4 +62,3 @@ $GLOBALS['TL_LANG']['tl_cowegis_icon']['toggle']['0']            = 'Aktivierung 
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['toggle']['1']            = 'Aktivierung von Icon ID %s umschalten';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['type']['0']              = 'Typ';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['type']['1']              = 'Wählen Sie den Icon-Typ';
-

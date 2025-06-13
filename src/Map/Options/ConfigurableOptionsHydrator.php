@@ -11,6 +11,7 @@ use Cowegis\Core\Definition\HasOptions;
 use Cowegis\Core\Definition\Options;
 use Cowegis\Core\Definition\Point;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function array_map;
 use function assert;
@@ -28,6 +29,7 @@ abstract class ConfigurableOptionsHydrator implements Hydrator
     /** @var list<string>|array<string,string> */
     protected static array $pointOptions = [];
 
+    #[Override]
     public function supports(object $data, object $definition): bool
     {
         if (! $this->supportsDefinition($definition)) {
@@ -37,6 +39,7 @@ abstract class ConfigurableOptionsHydrator implements Hydrator
         return $this->supportsData($data);
     }
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($data instanceof Model);

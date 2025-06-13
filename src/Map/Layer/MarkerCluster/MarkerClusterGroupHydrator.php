@@ -13,6 +13,7 @@ use Cowegis\Core\Definition\Expression\InlineExpression;
 use Cowegis\Core\Definition\Layer\Layer;
 use Cowegis\Core\Definition\Layer\MarkerClusterGroup;
 use Cowegis\Core\Definition\Options;
+use Override;
 
 use function assert;
 use function is_array;
@@ -33,6 +34,7 @@ final class MarkerClusterGroupHydrator extends GroupLayerHydrator
         'singleMarkerMode',
     ];
 
+    #[Override]
     protected function hydrateLayer(
         LayerModel $layerModel,
         Layer $layer,
@@ -55,6 +57,7 @@ final class MarkerClusterGroupHydrator extends GroupLayerHydrator
         $this->hydrateCustomOptions($layerModel, $layer->options());
     }
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'markerCluster';

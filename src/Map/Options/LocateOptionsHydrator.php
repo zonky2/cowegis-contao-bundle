@@ -9,6 +9,7 @@ use Cowegis\Bundle\Contao\Model\Map\MapModel;
 use Cowegis\Core\Definition\Map\Map;
 use Cowegis\Core\Definition\Options;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function assert;
 
@@ -24,6 +25,7 @@ final class LocateOptionsHydrator extends ConfigurableOptionsHydrator
         'maximumAge'         => 'locateMaximumAge',
     ];
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($definition instanceof Map);
@@ -35,6 +37,7 @@ final class LocateOptionsHydrator extends ConfigurableOptionsHydrator
         parent::hydrate($data, $definition, $context, $hydrator);
     }
 
+    #[Override]
     protected function determineOptions(object $definition): Options
     {
         assert($definition instanceof Map);
@@ -42,11 +45,13 @@ final class LocateOptionsHydrator extends ConfigurableOptionsHydrator
         return $definition->locateOptions();
     }
 
+    #[Override]
     protected function supportsDefinition(object $definition): bool
     {
         return $definition instanceof Map;
     }
 
+    #[Override]
     protected function supportsData(object $data): bool
     {
         return $data instanceof MapModel;

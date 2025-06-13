@@ -7,9 +7,11 @@ namespace Cowegis\Bundle\Contao\ConsentBridge;
 use Hofff\Contao\Consent\Bridge\Bridge;
 use Hofff\Contao\Consent\Bridge\Plugin as ConsentBridgePlugin;
 use Hofff\Contao\Consent\Bridge\Render\RenderInformation;
+use Override;
 
 final class Plugin implements ConsentBridgePlugin
 {
+    #[Override]
     public function load(Bridge $bridge): void
     {
         $renderInformation = RenderInformation::autoRenderWithPlaceholder('cowegis_consent_bridge_placeholder');

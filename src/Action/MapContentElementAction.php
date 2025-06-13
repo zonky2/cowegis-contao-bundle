@@ -7,6 +7,7 @@ namespace Cowegis\Bundle\Contao\Action;
 use Contao\ContentModel;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
 use Contao\Model;
+use Override;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -23,6 +24,7 @@ final class MapContentElementAction extends MapFragmentAction
         return parent::renderAsContentElement($request, $model, $section, $classes);
     }
 
+    #[Override]
     protected function getIdentifier(Model $model, string|null $identifier): string
     {
         if ($identifier === null) {

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -7,10 +8,6 @@ declare(strict_types=1);
  *
  * @link    http://help.transifex.com/intro/translating.html
  * @link    https://www.transifex.com/projects/p/contao-leaflet-maps/language/de/
- *
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
- *
- * last-updated: 2016-10-05T14:56:05+02:00
  */
 
 $GLOBALS['TL_LANG']['tl_cowegis_popup']['active']['0']         = 'Popup aktivieren';
@@ -65,4 +62,3 @@ $GLOBALS['TL_LANG']['tl_cowegis_popup']['title']['1']          = 'Titel des Icon
 $GLOBALS['TL_LANG']['tl_cowegis_popup']['title_legend']        = 'Titel';
 $GLOBALS['TL_LANG']['tl_cowegis_popup']['toggle']['0']         = 'Aktivierung umschalten';
 $GLOBALS['TL_LANG']['tl_cowegis_popup']['toggle']['1']         = 'Aktivierung von Popups ID %s umschalten';
-

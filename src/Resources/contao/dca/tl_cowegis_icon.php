@@ -120,21 +120,6 @@ $GLOBALS['TL_DCA']['tl_cowegis_icon'] = [
             'active' => ['active'],
         ],
 
-        'extra extends default' => [
-            'config' => [
-                'shape',
-                'icon',
-                'prefix',
-                'markerColor',
-                'iconColor',
-            ],
-            'assets' => [
-                ':hide',
-                'assets',
-            ],
-            'active' => ['active'],
-        ],
-
         'svg extends default' => [
             'config' => [
                 'backgroundColor',

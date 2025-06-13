@@ -6,6 +6,7 @@ namespace Cowegis\Bundle\Contao\Map\Layer;
 
 use Countable;
 use Iterator;
+use Override;
 
 use function count;
 
@@ -23,31 +24,37 @@ final class LayerTypeIterator implements Countable, Iterator
         $this->position   = 0;
     }
 
+    #[Override]
     public function current(): LayerType
     {
         return $this->layerTypes[$this->position];
     }
 
+    #[Override]
     public function next(): void
     {
         $this->position++;
     }
 
+    #[Override]
     public function key(): int
     {
         return $this->position;
     }
 
+    #[Override]
     public function valid(): bool
     {
         return $this->position < count($this->layerTypes);
     }
 
+    #[Override]
     public function rewind(): void
     {
         $this->position = 0;
     }
 
+    #[Override]
     public function count(): int
     {
         return count($this->layerTypes);

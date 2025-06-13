@@ -8,14 +8,17 @@ use Cowegis\Bundle\Contao\Map\Control\ControlType;
 use Cowegis\Bundle\Contao\Model\ControlModel;
 use Cowegis\Core\Definition\Control;
 use Cowegis\Core\Definition\Control\AttributionControl;
+use Override;
 
 final class AttributionControlType implements ControlType
 {
+    #[Override]
     public function name(): string
     {
         return 'attribution';
     }
 
+    #[Override]
     public function createDefinition(ControlModel $controlModel): Control
     {
         return new AttributionControl(

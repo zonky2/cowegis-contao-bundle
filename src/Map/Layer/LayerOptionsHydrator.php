@@ -7,14 +7,17 @@ namespace Cowegis\Bundle\Contao\Map\Layer;
 use Cowegis\Bundle\Contao\Map\Options\ConfigurableOptionsHydrator;
 use Cowegis\Bundle\Contao\Model\Map\MapLayerModel;
 use Cowegis\Core\Definition\LayerObject;
+use Override;
 
 abstract class LayerOptionsHydrator extends ConfigurableOptionsHydrator
 {
+    #[Override]
     protected function supportsData(object $data): bool
     {
         return $data instanceof MapLayerModel;
     }
 
+    #[Override]
     protected function supportsDefinition(object $definition): bool
     {
         return $definition instanceof LayerObject;

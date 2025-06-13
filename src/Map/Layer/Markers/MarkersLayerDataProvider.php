@@ -22,6 +22,7 @@ use Cowegis\Core\Definition\UI\MarkerId;
 use Cowegis\Core\Exception\InvalidArgument;
 use Cowegis\Core\Provider\LayerData;
 use Cowegis\Core\Provider\LayerData\MarkersLayerData;
+use Override;
 
 use function assert;
 use function sprintf;
@@ -34,6 +35,7 @@ final class MarkersLayerDataProvider implements LayerDataProvider
     ) {
     }
 
+    #[Override]
     public function findLayerData(LayerModel $layerModel, MapLayerContext $context): LayerData
     {
         if ($layerModel->type !== 'markers') {

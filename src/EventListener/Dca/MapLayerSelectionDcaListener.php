@@ -15,6 +15,7 @@ use Netzmacht\Contao\Toolkit\Callback\Invoker;
 use Netzmacht\Contao\Toolkit\Dca\Listener\AbstractListener;
 use Netzmacht\Contao\Toolkit\Dca\Manager;
 use Netzmacht\Contao\Toolkit\Security\Csrf\CsrfTokenProvider;
+use Override;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -36,6 +37,7 @@ final class MapLayerSelectionDcaListener extends AbstractListener
         parent::__construct($dcaManager);
     }
 
+    #[Override]
     public static function getName(): string
     {
         return 'tl_cowegis_layer';

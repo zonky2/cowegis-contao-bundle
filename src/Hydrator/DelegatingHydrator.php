@@ -6,6 +6,7 @@ namespace Cowegis\Bundle\Contao\Hydrator;
 
 use Cowegis\Core\Provider\Context;
 use Netzmacht\Contao\Toolkit\Response\ResponseTagger;
+use Override;
 
 /** @psalm-suppress PropertyNotSetInConstructor - see https://github.com/vimeo/psalm/issues/5062 */
 final class DelegatingHydrator implements Hydrator
@@ -20,6 +21,7 @@ final class DelegatingHydrator implements Hydrator
         $this->responseTaggerConstruct($responseTagger);
     }
 
+    #[Override]
     public function supports(object $data, object $definition): bool
     {
         foreach ($this->hydrators as $hydrator) {
@@ -31,6 +33,7 @@ final class DelegatingHydrator implements Hydrator
         return false;
     }
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         foreach ($this->hydrators as $delegate) {

@@ -10,6 +10,7 @@ use Cowegis\Bundle\Contao\Model\Map\MapModel;
 use Cowegis\Core\Definition\Map\Map;
 use Cowegis\Core\Definition\Options;
 use Cowegis\Core\Definition\Point;
+use Override;
 
 use function array_map;
 use function assert;
@@ -25,6 +26,7 @@ final class BoundsOptionsHydrator extends ConfigurableOptionsHydrator
     ];
 
     /** @param array<int|string,string> $keys */
+    #[Override]
     protected function hydrateOptions(Model $model, Options $options, array $keys): void
     {
         parent::hydrateOptions($model, $options, $keys);
@@ -33,6 +35,7 @@ final class BoundsOptionsHydrator extends ConfigurableOptionsHydrator
         $this->hydrateBoundsPadding($model, $options);
     }
 
+    #[Override]
     protected function determineOptions(object $definition): Options
     {
         assert($definition instanceof Map);
@@ -40,11 +43,13 @@ final class BoundsOptionsHydrator extends ConfigurableOptionsHydrator
         return $definition->boundsOptions();
     }
 
+    #[Override]
     protected function supportsDefinition(object $definition): bool
     {
         return $definition instanceof Map;
     }
 
+    #[Override]
     protected function supportsData(object $data): bool
     {
         return $data instanceof MapModel;

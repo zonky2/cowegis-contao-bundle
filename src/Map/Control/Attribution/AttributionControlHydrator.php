@@ -10,6 +10,7 @@ use Cowegis\Bundle\Contao\Map\Control\ControlTypeHydrator;
 use Cowegis\Bundle\Contao\Model\ControlModel;
 use Cowegis\Core\Definition\Control\AttributionControl;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function array_filter;
 use function assert;
@@ -22,11 +23,13 @@ final class AttributionControlHydrator extends ControlTypeHydrator
         'prefix',
     ];
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'attribution';
     }
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         parent::hydrate($data, $definition, $context, $hydrator);

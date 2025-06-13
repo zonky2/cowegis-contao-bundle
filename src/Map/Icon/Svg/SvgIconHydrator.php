@@ -6,6 +6,7 @@ namespace Cowegis\Bundle\Contao\Map\Icon\Svg;
 
 use Cowegis\Bundle\Contao\Map\Icon\IconTypeHydrator;
 use Cowegis\Core\Definition\Icon\SvgIcon;
+use Override;
 
 final class SvgIconHydrator extends IconTypeHydrator
 {
@@ -25,11 +26,13 @@ final class SvgIconHydrator extends IconTypeHydrator
         'tooltipAnchor',
     ];
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'svg';
     }
 
+    #[Override]
     protected function supportedDefinition(): string
     {
         return SvgIcon::class;

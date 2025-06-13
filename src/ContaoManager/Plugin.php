@@ -13,6 +13,7 @@ use Contao\ManagerPlugin\Routing\RoutingPluginInterface;
 use Cowegis\Bundle\Api\CowegisApiBundle;
 use Cowegis\Bundle\Contao\CowegisContaoBundle;
 use Cowegis\Bundle\ContaoGeocodeWidget\CowegisContaoGeocodeWidgetBundle;
+use Override;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\RouteCollection;
@@ -27,6 +28,7 @@ final class Plugin implements BundlePluginInterface, RoutingPluginInterface
      *
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
+    #[Override]
     public function getBundles(ParserInterface $parser): array
     {
         return [
@@ -40,6 +42,7 @@ final class Plugin implements BundlePluginInterface, RoutingPluginInterface
     }
 
     /** @SuppressWarnings(PHPMD.UnusedFormalParameter) */
+    #[Override]
     public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel): RouteCollection|null
     {
         $routeCollection = new RouteCollection();

@@ -9,11 +9,13 @@ use Cowegis\Bundle\Contao\Provider\LayerDataProvider;
 use Cowegis\Bundle\Contao\Provider\MapLayerContext;
 use Cowegis\Core\Exception\InvalidArgument;
 use Cowegis\Core\Provider\LayerData;
+use Override;
 
 use function sprintf;
 
 final class VectorsDataLayerProvider implements LayerDataProvider
 {
+    #[Override]
     public function findLayerData(LayerModel $layerModel, MapLayerContext $context): LayerData
     {
         if ($layerModel->type !== 'vectors') {

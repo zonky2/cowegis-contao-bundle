@@ -17,6 +17,7 @@ use Cowegis\Core\Definition\Layer\Layer;
 use Cowegis\Core\Provider\LayerData\MarkersLayerData;
 use Cowegis\Core\Serializer\Serializer;
 use Netzmacht\Contao\Toolkit\Response\ResponseTagger;
+use Override;
 use Symfony\Component\Routing\RouterInterface;
 
 use function array_merge;
@@ -33,11 +34,13 @@ final class MarkersLayerHydrator extends LayerTypeHydrator
         parent::__construct($responseTagger);
     }
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'markers';
     }
 
+    #[Override]
     protected function hydrateLayer(
         LayerModel $layerModel,
         Layer $layer,

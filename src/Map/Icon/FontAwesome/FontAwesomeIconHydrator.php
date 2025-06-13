@@ -8,6 +8,7 @@ use Cowegis\Bundle\Contao\Map\Icon\IconTypeHydrator;
 use Cowegis\Bundle\Contao\Model\MarkerModel;
 use Cowegis\Core\Definition\Icon\FontAwesomeIcon;
 use Cowegis\Core\Definition\Icon\Icon;
+use Override;
 
 final class FontAwesomeIconHydrator extends IconTypeHydrator
 {
@@ -28,11 +29,13 @@ final class FontAwesomeIconHydrator extends IconTypeHydrator
         'tooltipAnchor',
     ];
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'fontAwesome';
     }
 
+    #[Override]
     protected function customizeForMarker(MarkerModel $markerModel, Icon $icon): void
     {
         if (! $markerModel->markerSymbol) {
@@ -42,6 +45,7 @@ final class FontAwesomeIconHydrator extends IconTypeHydrator
         $icon->options()->set('icon', $markerModel->markerSymbol);
     }
 
+    #[Override]
     protected function supportedDefinition(): string
     {
         return FontAwesomeIcon::class;

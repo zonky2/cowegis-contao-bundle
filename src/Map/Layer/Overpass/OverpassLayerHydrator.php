@@ -13,6 +13,7 @@ use Cowegis\Core\Definition\DefinitionId\IntegerDefinitionId;
 use Cowegis\Core\Definition\Expression\InlineExpression;
 use Cowegis\Core\Definition\Icon\IconId;
 use Cowegis\Core\Definition\Layer\Layer;
+use Override;
 
 /** @psalm-suppress PropertyNotSetInConstructor - see https://github.com/vimeo/psalm/issues/5062 */
 final class OverpassLayerHydrator extends LayerTypeHydrator
@@ -24,11 +25,13 @@ final class OverpassLayerHydrator extends LayerTypeHydrator
         'endpoint' => 'overpassEndpoint',
     ];
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'overpass';
     }
 
+    #[Override]
     protected function hydrateLayer(
         LayerModel $layerModel,
         Layer $layer,

@@ -10,6 +10,7 @@ use Cowegis\Bundle\Contao\Model\LayerModel;
 use Cowegis\Bundle\Contao\Model\Map\MapLayerModel;
 use Cowegis\Core\Definition\Layer\Layer;
 use Cowegis\Core\Definition\Layer\TileLayer;
+use Override;
 
 use function is_string;
 use function parse_url;
@@ -22,12 +23,14 @@ final class TileLayerType implements LayerType
 {
     use MapLayerType;
 
+    #[Override]
     public function name(): string
     {
         return 'tileLayer';
     }
 
     /** {@inheritDoc} */
+    #[Override]
     public function label(string $label, array $row): string
     {
         $url = parse_url((string) $row['tileUrl'], PHP_URL_HOST);
@@ -39,6 +42,7 @@ final class TileLayerType implements LayerType
         return $label;
     }
 
+    #[Override]
     public function createDefinition(LayerModel $layerModel, MapLayerModel $mapLayerModel): Layer
     {
         return new TileLayer(

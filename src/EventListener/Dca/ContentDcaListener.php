@@ -6,6 +6,7 @@ namespace Cowegis\Bundle\Contao\EventListener\Dca;
 
 use Netzmacht\Contao\Toolkit\Dca\DcaManager;
 use Netzmacht\Contao\Toolkit\Dca\Listener\AbstractListener;
+use Override;
 
 final class ContentDcaListener extends AbstractListener
 {
@@ -14,6 +15,7 @@ final class ContentDcaListener extends AbstractListener
         parent::__construct($dcaManager);
     }
 
+    #[Override]
     public static function getName(): string
     {
         return 'tl_content';

@@ -12,6 +12,7 @@ use Cowegis\Bundle\Contao\Provider\MapLayerContext;
 use Cowegis\Core\Definition\Layer\Layer;
 use Cowegis\Core\Definition\Map\PaneId;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function assert;
 
@@ -19,6 +20,7 @@ abstract class LayerTypeHydrator extends ConfigurableOptionsHydrator
 {
     use ResponseTaggerPlugin;
 
+    #[Override]
     public function supports(object $data, object $definition): bool
     {
         if (! $definition instanceof Layer) {
@@ -32,6 +34,7 @@ abstract class LayerTypeHydrator extends ConfigurableOptionsHydrator
         return $data->type === $this->supportedType();
     }
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($data instanceof LayerModel);

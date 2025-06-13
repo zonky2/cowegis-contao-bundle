@@ -11,12 +11,14 @@ use Cowegis\Bundle\Contao\Model\MarkerModel;
 use Cowegis\Core\Definition\Definition;
 use Cowegis\Core\Definition\Icon\Icon;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function assert;
 use function is_a;
 
 abstract class IconTypeHydrator extends ConfigurableOptionsHydrator
 {
+    #[Override]
     public function supports(object $data, object $definition): bool
     {
         if (! $definition instanceof Icon) {
@@ -34,6 +36,7 @@ abstract class IconTypeHydrator extends ConfigurableOptionsHydrator
         return false;
     }
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($definition instanceof Icon);

@@ -6,6 +6,7 @@ namespace Cowegis\Bundle\Contao\Map\Icon;
 
 use Cowegis\Bundle\Contao\Exception\InvalidIconType;
 use IteratorAggregate;
+use Override;
 
 use function array_values;
 use function sprintf;
@@ -47,6 +48,7 @@ final class IconTypeRegistry implements IteratorAggregate
         return $this->iconTypes[$iconType];
     }
 
+    #[Override]
     public function getIterator(): IconTypeIterator
     {
         return new IconTypeIterator(...array_values($this->iconTypes));

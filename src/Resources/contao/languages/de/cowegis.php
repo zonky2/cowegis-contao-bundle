@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -7,10 +8,6 @@ declare(strict_types=1);
  *
  * @link    http://help.transifex.com/intro/translating.html
  * @link    https://www.transifex.com/projects/p/contao-leaflet-maps/language/de/
- *
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
- *
- * last-updated: 2017-10-17T16:04:08+00:00
  */
 
 $GLOBALS['TL_LANG']['cowegis']['applyPosition']             = 'Position anwenden';
@@ -60,3 +57,6 @@ $GLOBALS['TL_LANG']['cowegis_vector']['polyline']['1']      = 'Polyline.Overlay.
 $GLOBALS['TL_LANG']['cowegis_vector']['rectangle']['0']     = 'Rechteck';
 $GLOBALS['TL_LANG']['cowegis_vector']['rectangle']['1']     = 'Rechteckiges Overlay. Lesen Sie für mehr Details den Artikel in der  <a href="http://leafletjs.com/reference.html#rectangle" target="_blank">Leaflet-Dokumentation</a>.';
 
+
+$GLOBALS['TL_LANG']['cowegis_icon']['svg'][0] = 'SVG icon';
+$GLOBALS['TL_LANG']['cowegis_icon']['svg'][1] = 'SVG icon';

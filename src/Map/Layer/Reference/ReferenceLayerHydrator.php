@@ -13,6 +13,7 @@ use Cowegis\Bundle\Contao\Provider\MapLayerContext;
 use Cowegis\Core\Definition\Layer\Layer;
 use Cowegis\Core\Exception\LayerNotFound;
 use Netzmacht\Contao\Toolkit\Response\ResponseTagger;
+use Override;
 
 final class ReferenceLayerHydrator extends LayerTypeHydrator
 {
@@ -21,6 +22,7 @@ final class ReferenceLayerHydrator extends LayerTypeHydrator
         parent::__construct($responseTagger);
     }
 
+    #[Override]
     protected function hydrateLayer(
         LayerModel $layerModel,
         Layer $layer,
@@ -38,6 +40,7 @@ final class ReferenceLayerHydrator extends LayerTypeHydrator
         $hydrator->hydrate($referenceModel, $layer, $context, $hydrator);
     }
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'reference';

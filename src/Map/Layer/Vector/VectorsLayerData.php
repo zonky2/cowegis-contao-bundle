@@ -6,6 +6,7 @@ namespace Cowegis\Bundle\Contao\Map\Layer\Vector;
 
 use Cowegis\Core\Provider\LayerData;
 use JsonSerializable;
+use Override;
 
 final class VectorsLayerData implements LayerData, JsonSerializable
 {
@@ -13,6 +14,7 @@ final class VectorsLayerData implements LayerData, JsonSerializable
     {
     }
 
+    #[Override]
     public function jsonSerialize(): string|null
     {
         return $this->geoJson;

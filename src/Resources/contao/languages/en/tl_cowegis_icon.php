@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['title_legend']  = 'Title';
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['config_legend'] = 'Configuration';
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['shadow_legend'] = 'Shadow';
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['active_legend'] = 'Activation';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['title_legend']   = 'Title';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['config_legend']  = 'Configuration';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['shadow_legend']  = 'Shadow';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['active_legend']  = 'Activation';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['anchors_legend'] = 'Anchors';
 
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['layersBtn'][0] = 'Manage layers';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['layersBtn'][1] = 'Manage leaflet layers';
@@ -50,12 +51,14 @@ $GLOBALS['TL_LANG']['tl_cowegis_icon']['shadowRetinaImage'][0] = 'Retina shadow 
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['shadowRetinaImage'][1] = 'Choose an retina shadow image.';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['shadowAnchor'][0]      = 'Shadow anchor';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['shadowAnchor'][1]      = 'The coordinates of the "tip" of the shadow (relative to its top left corner) (the same as iconAnchor if not specified).';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['tooltipAnchor'][0]     = 'Tooltip anchor';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['tooltipAnchor'][1]     = 'THe coordinated of the tooltip offset, e.g. <em>20,40</em>.';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['active'][0]            = 'Activate the icon';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['active'][1]            = 'Activate the icon.';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['className'][0]         = 'Class name';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['className'][1]         = 'A custom class name to assign to both icon and shadow images. Empty by default.';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['icon'][0]              = 'Icon CSS class';
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['icon'][1]              = 'Icon CCS class, e.g <em>fa-envelope</em>';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['icon'][1]              = 'Icon CCS class, e.g <em>envelope</em>';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['prefix'][0]            = 'Icon prefix class';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['prefix'][1]            = 'Icon prefix class, e.g <em>fa</em>';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['shape'][0]             = 'Marker shape';
@@ -64,3 +67,9 @@ $GLOBALS['TL_LANG']['tl_cowegis_icon']['markerColor'][0]       = 'marker color';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['markerColor'][1]       = 'Choose a predefined color of the marker.';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['iconColor'][0]         = 'Icon color';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['iconColor'][1]         = 'Define a custom icon color here.';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['content'][0]           = 'Content';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['content'][1]           = 'Custom content shown in the icon.';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['iconSize'][0]          = 'Icon size';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['iconSize'][1]          = 'Icon size in pixels as comma separated values, e.g. <em>20,40</em>.';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['faIconSet'][0]         = 'FontAwesome Icon Set';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['faIconSet'][0]         = 'Please select the preferred FontAwesome Icon Set';

@@ -20,6 +20,7 @@ use Cowegis\Core\Definition\UI\Marker;
 use Cowegis\Core\Definition\UI\Popup;
 use Cowegis\Core\Definition\UI\Tooltip;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function assert;
 use function is_array;
@@ -39,6 +40,7 @@ final class MarkerHydrator extends ConfigurableOptionsHydrator
     ) {
     }
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($data instanceof MarkerModel);
@@ -72,11 +74,13 @@ final class MarkerHydrator extends ConfigurableOptionsHydrator
         $definition->options()->set('pane', $context->dataPaneId());
     }
 
+    #[Override]
     protected function supportsDefinition(object $definition): bool
     {
         return $definition instanceof Marker;
     }
 
+    #[Override]
     protected function supportsData(object $data): bool
     {
         return $data instanceof MarkerModel;

@@ -11,6 +11,7 @@ use Cowegis\Core\Schema\SchemaDescriber;
 use GoldSpecDigital\ObjectOrientedOAS\Objects\Server;
 use Netzmacht\Contao\Toolkit\Data\Model\ContaoRepository;
 use Netzmacht\Contao\Toolkit\Data\Model\RepositoryManager;
+use Override;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -25,6 +26,7 @@ final class ServersSchemaDescriber implements SchemaDescriber
     ) {
     }
 
+    #[Override]
     public function describe(SchemaBuilder $builder): void
     {
         $repository = $this->repositoryManager->getRepository(PageModel::class);

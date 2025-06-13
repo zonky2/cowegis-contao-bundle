@@ -13,6 +13,7 @@ use Cowegis\Core\Definition\Layer\DataLayer;
 use Cowegis\Core\Definition\Layer\Layer;
 use Netzmacht\Contao\Toolkit\Data\Model\ContaoRepository;
 use Netzmacht\Contao\Toolkit\Data\Model\RepositoryManager;
+use Override;
 
 use function assert;
 
@@ -25,12 +26,14 @@ final class FileLayerType implements LayerType
     {
     }
 
+    #[Override]
     public function name(): string
     {
         return 'file';
     }
 
     /** {@inheritDoc} */
+    #[Override]
     public function label(string $label, array $row): string
     {
         $repository = $this->repositoryManager->getRepository(FilesModel::class);
@@ -44,6 +47,7 @@ final class FileLayerType implements LayerType
         return $label;
     }
 
+    #[Override]
     public function createDefinition(LayerModel $layerModel, MapLayerModel $mapLayerModel): Layer
     {
         return new DataLayer(

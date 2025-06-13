@@ -5,9 +5,6 @@ declare(strict_types=1);
 /**
  * Leaflet maps for Contao CMS.
  *
- * @author     David Molineus <david.molineus@netzmacht.de>
- * @copyright  2014-2017 netzmacht David Molineus. All rights reserved.
- * @license    LGPL-3.0 https://github.com/netzmacht/contao-leaflet-maps/blob/master/LICENSE
  * @filesource
  */
 
@@ -23,8 +20,8 @@ $GLOBALS['TL_LANG']['cowegis_control']['loading'][0]     = 'Loading indicator';
 $GLOBALS['TL_LANG']['cowegis_control']['loading'][1]     = 'Leaflet.loading is a simple loading indicator implemented as control. For more details read the <a href="https://github.com/ebrelsford/Leaflet.loading" target="_blank">Plugin documentation</a>.';
 $GLOBALS['TL_LANG']['cowegis_control']['fullscreen'][0]  = 'Fullscreen control';
 $GLOBALS['TL_LANG']['cowegis_control']['fullscreen'][1]  = 'Add a fullscreen toggle button. For more details read the <a href="https://github.com/brunob/leaflet.fullscreen" target="_blank">plugin documentation</a>.';
-$GLOBALS['TL_LANG']['cowegis_control']['geocoder'][0]        = 'Geocoder';
-$GLOBALS['TL_LANG']['cowegis_control']['geocoder'][1]        = 'A simple geocoder for Leaflet that by default uses OSM/Nominatim. For more details read the <a href="https://www.liedman.net/leaflet-control-geocoder/docs/" target="_blank">plugin documentation</a>.';
+$GLOBALS['TL_LANG']['cowegis_control']['geocoder'][0]    = 'Geocoder';
+$GLOBALS['TL_LANG']['cowegis_control']['geocoder'][1]    = 'A simple geocoder for Leaflet that by default uses OSM/Nominatim. For more details read the <a href="https://www.liedman.net/leaflet-control-geocoder/docs/" target="_blank">plugin documentation</a>.';
 
 $GLOBALS['TL_LANG']['cowegis_layer']['provider'][0]      = 'Leaflet provider';
 $GLOBALS['TL_LANG']['cowegis_layer']['provider'][1]      = 'Leaflet tile provider. For more details read the <a href="https://github.com/leaflet-extras/leaflet-providers" target="_blank">plugin documentation</a>.';
@@ -59,6 +56,9 @@ $GLOBALS['TL_LANG']['cowegis_vector']['circleMarker'][0]  = 'Circle marker';
 $GLOBALS['TL_LANG']['cowegis_vector']['circleMarker'][1]  = 'Circle marker with fixed pixel width. For more details read the <a href="http://leafletjs.com/reference.html#circlemarker" target="_blank">Leaflet documentation</a>.';
 $GLOBALS['TL_LANG']['cowegis_vector']['rectangle'][0]     = 'Rectangle';
 $GLOBALS['TL_LANG']['cowegis_vector']['rectangle'][1]     = 'Rectangle overlay. For more details read the <a href="http://leafletjs.com/reference.html#rectangle" target="_blank">Leaflet documentation</a>.';
+
+$GLOBALS['TL_LANG']['cowegis_icon']['svg'][0] = 'SVG icon';
+$GLOBALS['TL_LANG']['cowegis_icon']['svg'][1] = 'SVG icon';
 
 $GLOBALS['TL_LANG']['cowegis']['searchPosition'] = 'Search location';
 $GLOBALS['TL_LANG']['cowegis']['applyPosition']  = 'Apply position';

@@ -6,6 +6,7 @@ namespace Cowegis\Bundle\Contao\Map\Layer;
 
 use Cowegis\Bundle\Contao\Exception\InvalidIconType;
 use IteratorAggregate;
+use Override;
 
 use function array_values;
 use function sprintf;
@@ -51,6 +52,7 @@ final class LayerTypeRegistry implements IteratorAggregate
         return $this->layerTypes[$layerType];
     }
 
+    #[Override]
     public function getIterator(): LayerTypeIterator
     {
         return new LayerTypeIterator(...array_values($this->layerTypes));

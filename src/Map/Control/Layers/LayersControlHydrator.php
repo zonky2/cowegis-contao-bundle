@@ -13,6 +13,7 @@ use Cowegis\Core\Definition\Expression\InlineExpression;
 use Cowegis\Core\Definition\Layer\LayerId;
 use Cowegis\Core\Provider\Context;
 use Doctrine\DBAL\Connection;
+use Override;
 
 use function assert;
 
@@ -31,6 +32,7 @@ final class LayersControlHydrator extends ControlTypeHydrator
     {
     }
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($data instanceof ControlModel);
@@ -43,6 +45,7 @@ final class LayersControlHydrator extends ControlTypeHydrator
         $this->hydrateNameFunction($data, $definition, $context);
     }
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'layers';

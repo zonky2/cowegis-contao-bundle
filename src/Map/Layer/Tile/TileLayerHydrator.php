@@ -9,6 +9,7 @@ use Cowegis\Bundle\Contao\Map\Layer\LayerTypeHydrator;
 use Cowegis\Bundle\Contao\Model\LayerModel;
 use Cowegis\Bundle\Contao\Provider\MapLayerContext;
 use Cowegis\Core\Definition\Layer\Layer;
+use Override;
 
 /** @psalm-suppress PropertyNotSetInConstructor - see https://github.com/vimeo/psalm/issues/5062 */
 final class TileLayerHydrator extends LayerTypeHydrator
@@ -27,11 +28,13 @@ final class TileLayerHydrator extends LayerTypeHydrator
         'attribution',
     ];
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'tileLayer';
     }
 
+    #[Override]
     protected function hydrateLayer(
         LayerModel $layerModel,
         Layer $layer,

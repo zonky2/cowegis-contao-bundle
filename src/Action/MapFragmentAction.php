@@ -17,6 +17,7 @@ use Netzmacht\Contao\Toolkit\Data\Model\RepositoryManager;
 use Netzmacht\Contao\Toolkit\Response\ResponseTagger;
 use Netzmacht\Contao\Toolkit\Routing\RequestScopeMatcher;
 use Netzmacht\Contao\Toolkit\View\Template\TemplateRenderer;
+use Override;
 use Psr\Http\Message\UriFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Exception\InvalidParameterException;
@@ -58,11 +59,12 @@ abstract class MapFragmentAction extends AbstractHybridController
      *
      * @SuppressWarnings(PHPMD.Superglobals)
      */
+    #[Override]
     protected function prepareTemplateData(array $data, Request $request, Model $model): array
     {
-        $data['mapStyle']  = $this->compileMapStyle($model);
-        $data['mapId']     = $this->getIdentifier($model, $this->getDefaultIdentifier($model));
-        $data['clientJs']  = $this->getClientJs($model);
+        $data['mapStyle'] = $this->compileMapStyle($model);
+        $data['mapId']    = $this->getIdentifier($model, $this->getDefaultIdentifier($model));
+        $data['clientJs'] = $this->getClientJs($model);
 
         try {
             $data['mapUri'] = $this->router->generate(

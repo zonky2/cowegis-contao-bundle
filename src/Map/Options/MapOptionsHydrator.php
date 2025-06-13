@@ -10,6 +10,7 @@ use Cowegis\Bundle\Contao\Model\Map\MapModel;
 use Cowegis\Core\Definition\Map\Map;
 use Cowegis\Core\Definition\Options;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function assert;
 use function is_array;
@@ -39,6 +40,7 @@ final class MapOptionsHydrator extends ConfigurableOptionsHydrator
         'keyboard' => ['keyboardPanOffset', 'keyboardZoomOffset'],
     ];
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($data instanceof MapModel);
@@ -51,11 +53,13 @@ final class MapOptionsHydrator extends ConfigurableOptionsHydrator
         $this->hydrateCustomOptions($data, $options);
     }
 
+    #[Override]
     protected function supportsDefinition(object $definition): bool
     {
         return $definition instanceof Map;
     }
 
+    #[Override]
     protected function supportsData(object $data): bool
     {
         return $data instanceof MapModel;

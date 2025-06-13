@@ -11,6 +11,7 @@ use Cowegis\Bundle\Contao\Model\PopupModel;
 use Cowegis\Core\Definition\Point;
 use Cowegis\Core\Definition\Preset\PopupPreset;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function array_map;
 use function assert;
@@ -31,6 +32,7 @@ final class PopupPresetHydrator extends ConfigurableOptionsHydrator
         'closeOnEscapeKey',
     ];
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($data instanceof PopupModel);
@@ -48,11 +50,13 @@ final class PopupPresetHydrator extends ConfigurableOptionsHydrator
         $this->hydrateAutoPan($data, $definition);
     }
 
+    #[Override]
     protected function supportsDefinition(object $definition): bool
     {
         return $definition instanceof PopupPreset;
     }
 
+    #[Override]
     protected function supportsData(object $data): bool
     {
         return $data instanceof PopupModel;

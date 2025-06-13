@@ -12,6 +12,7 @@ use Cowegis\Bundle\Contao\Model\Map\MapModel;
 use Cowegis\Bundle\Contao\Model\Map\MapRepository;
 use Netzmacht\Contao\Toolkit\Dca\Listener\AbstractListener;
 use Netzmacht\Contao\Toolkit\Dca\Manager;
+use Override;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -27,6 +28,7 @@ final class MapDcaListener extends AbstractListener
         parent::__construct($dcaManager);
     }
 
+    #[Override]
     public static function getName(): string
     {
         return 'tl_cowegis_map';

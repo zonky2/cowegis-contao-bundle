@@ -14,6 +14,7 @@ use Cowegis\Bundle\Contao\Map\Layer\LayerTypeRegistry;
 use Cowegis\Bundle\Contao\Map\Layer\NodeLayerType;
 use Netzmacht\Contao\Toolkit\Dca\Listener\AbstractListener;
 use Netzmacht\Contao\Toolkit\Dca\Manager;
+use Override;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 use function array_keys;
@@ -41,6 +42,7 @@ final class LayerDcaListener extends AbstractListener
         parent::__construct($dcaManager);
     }
 
+    #[Override]
     public static function getName(): string
     {
         return 'tl_cowegis_layer';

@@ -10,6 +10,7 @@ use Cowegis\Bundle\Contao\Model\ControlModel;
 use Cowegis\ContaoGeocoder\Routing\SearchUrlGenerator;
 use Cowegis\Core\Definition\Control\GeocoderControl;
 use Cowegis\Core\Provider\Context;
+use Override;
 use Symfony\Component\Routing\RouterInterface;
 
 use function assert;
@@ -37,11 +38,13 @@ final class GeocoderControlTypeHydrator extends ControlTypeHydrator
     {
     }
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'geocoder';
     }
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         parent::hydrate($data, $definition, $context, $hydrator);

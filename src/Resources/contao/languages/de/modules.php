@@ -23,4 +23,3 @@ $GLOBALS['TL_LANG']['MOD']['tl_cowegis_icon']    = 'Icons';
 $GLOBALS['TL_LANG']['MOD']['tl_cowegis_layer']   = 'Kartenlayer';
 $GLOBALS['TL_LANG']['MOD']['tl_cowegis_map']     = 'Karten';
 $GLOBALS['TL_LANG']['MOD']['tl_cowegis_marker']  = 'Marker';
-

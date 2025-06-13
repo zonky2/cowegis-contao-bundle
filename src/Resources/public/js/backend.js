@@ -25,23 +25,23 @@ var ContaoCowegisAjaxRequest = {
     toggleVisibility: function (el, id, table) {
         el.blur();
 
-        var img = null,
-            image = $(el).getFirst('img'),
+        var img       = null,
+            image     = $(el).getFirst('img'),
             published = (image.get('data-state') == 1),
-            div = el.getParent('div'),
+            div       = el.getParent('div'),
             index, next, icon, icond, pa;
-        img = div.getParent('li').getFirst('.tl_left img.list-icon');
+        img           = div.getParent('li').getFirst('.tl_left img.list-icon');
 
         // Change the icon
         if (img !== null && img.nodeName.toLowerCase() == 'img') {
-            icon = img.get('data-icon');
+            icon  = img.get('data-icon');
             icond = img.get('data-icon-disabled');
 
-            img.src = !published ? icon : icond;
+            img.src = ! published ? icon : icond;
         }
 
         // Send request
-        if (!published) {
+        if (! published) {
             image.src = AjaxRequest.themePath + 'icons/visible.svg';
             image.set('data-state', 1);
             new Request.Contao({'url': window.location.href, 'followRedirects': false}).get({

@@ -17,6 +17,7 @@ use Cowegis\Core\Filter\FilterFactory;
 use Netzmacht\Contao\Toolkit\Dca\Listener\AbstractListener;
 use Netzmacht\Contao\Toolkit\Dca\Manager;
 use Netzmacht\Contao\Toolkit\Dca\Options\OptionsBuilder;
+use Override;
 use stdClass;
 
 use function assert;
@@ -36,6 +37,7 @@ final class MapLayerDcaListener extends AbstractListener
         parent::__construct($dcaManager);
     }
 
+    #[Override]
     public static function getName(): string
     {
         return 'tl_cowegis_map_layer';

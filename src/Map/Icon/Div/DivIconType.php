@@ -8,14 +8,17 @@ use Cowegis\Bundle\Contao\Map\Icon\BaseIconType;
 use Cowegis\Bundle\Contao\Model\IconModel;
 use Cowegis\Core\Definition\Icon\DivIcon;
 use Cowegis\Core\Definition\Icon\Icon;
+use Override;
 
 final class DivIconType extends BaseIconType
 {
+    #[Override]
     public function name(): string
     {
         return 'div';
     }
 
+    #[Override]
     public function createDefinition(IconModel $iconModel): Icon
     {
         return new DivIcon($iconModel->iconId());

@@ -22,6 +22,7 @@ use Cowegis\Core\IdFormat\IdFormat;
 use Cowegis\Core\Provider\Context;
 use Cowegis\Core\Provider\LayerData;
 use Cowegis\Core\Provider\Provider;
+use Override;
 use Psr\Container\ContainerInterface;
 
 use function assert;
@@ -39,11 +40,13 @@ final class ContaoBackendProvider implements Provider
     ) {
     }
 
+    #[Override]
     public function idFormat(): IdFormat
     {
         return $this->idFormat;
     }
 
+    #[Override]
     public function findMap(MapId $mapId, Context $context): Map
     {
         $this->initialize($context);
@@ -66,6 +69,7 @@ final class ContaoBackendProvider implements Provider
         return $definition;
     }
 
+    #[Override]
     public function findLayerData(MapId $mapId, LayerId $layerId, Context $context): LayerData
     {
         $this->initialize($context);

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -7,10 +8,6 @@ declare(strict_types=1);
  *
  * @link    http://help.transifex.com/intro/translating.html
  * @link    https://www.transifex.com/projects/p/contao-leaflet-maps/language/de/
- *
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
- *
- * last-updated: 2015-02-11T08:58:00+01:00
  */
 
 
@@ -25,4 +22,3 @@ $GLOBALS['TL_LANG']['tl_module']['leaflet_template']['0'] = 'Karten-Template';
 $GLOBALS['TL_LANG']['tl_module']['leaflet_template']['1'] = 'Wählen Sie ein Template für das Erstellen der Karte aus. Das Template muss Javascript erzeugen, kein HTML.';
 $GLOBALS['TL_LANG']['tl_module']['leaflet_width']['0']    = 'Kartenbreite';
 $GLOBALS['TL_LANG']['tl_module']['leaflet_width']['1']    = 'Legen Sie die Breite der Karte fest.';
-

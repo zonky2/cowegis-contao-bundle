@@ -6,6 +6,7 @@ namespace Cowegis\Bundle\Contao\Map\Style;
 
 use Cowegis\Bundle\Contao\Exception\InvalidStyleType;
 use IteratorAggregate;
+use Override;
 
 use function array_values;
 use function sprintf;
@@ -47,6 +48,7 @@ final class StyleTypeRegistry implements IteratorAggregate
         return $this->controlTypes[$controlType];
     }
 
+    #[Override]
     public function getIterator(): StyleTypeIterator
     {
         return new StyleTypeIterator(...array_values($this->controlTypes));

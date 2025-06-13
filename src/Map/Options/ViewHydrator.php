@@ -13,6 +13,7 @@ use Cowegis\Core\Definition\Map\View;
 use Cowegis\Core\Definition\Options;
 use Cowegis\Core\Definition\Point;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function array_map;
 use function assert;
@@ -24,6 +25,7 @@ final class ViewHydrator extends ConfigurableOptionsHydrator
     /** @var list<string>|array<string,string> */
     protected static array $options = ['maxZoom'];
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($data instanceof MapModel);
@@ -41,11 +43,13 @@ final class ViewHydrator extends ConfigurableOptionsHydrator
         $this->hydrateBoundsPadding($data, $options);
     }
 
+    #[Override]
     protected function supportsData(object $data): bool
     {
         return $data instanceof MapModel;
     }
 
+    #[Override]
     protected function supportsDefinition(object $definition): bool
     {
         return $definition instanceof View;

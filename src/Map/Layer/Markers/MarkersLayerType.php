@@ -11,6 +11,7 @@ use Cowegis\Bundle\Contao\Model\Map\MapLayerModel;
 use Cowegis\Bundle\Contao\Model\MarkerRepository;
 use Cowegis\Core\Definition\Layer\DataLayer;
 use Cowegis\Core\Definition\Layer\Layer;
+use Override;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 use function sprintf;
@@ -25,17 +26,20 @@ final class MarkersLayerType implements DataLayerType
     ) {
     }
 
+    #[Override]
     public function name(): string
     {
         return 'markers';
     }
 
+    #[Override]
     public function dataTable(): string
     {
         return 'tl_cowegis_marker';
     }
 
     /** {@inheritDoc} */
+    #[Override]
     public function label(string $label, array $row): string
     {
         $count = $this->markerRepository->countBy(['.pid=?'], [$row['id']]);
@@ -47,6 +51,7 @@ final class MarkersLayerType implements DataLayerType
         );
     }
 
+    #[Override]
     public function createDefinition(LayerModel $layerModel, MapLayerModel $mapLayerModel): Layer
     {
         return new DataLayer(

@@ -11,6 +11,7 @@ use Cowegis\Core\Definition\Control\ControlId;
 use Cowegis\Core\Definition\Control\LoadingControl;
 use Cowegis\Core\Definition\DefinitionId\IntegerDefinitionId;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function assert;
 use function count;
@@ -27,6 +28,7 @@ final class LoadingControlHydrator extends ControlTypeHydrator
         'spinjs',
     ];
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         parent::hydrate($data, $definition, $context, $hydrator);
@@ -51,6 +53,7 @@ final class LoadingControlHydrator extends ControlTypeHydrator
         );
     }
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'loading';

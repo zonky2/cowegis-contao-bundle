@@ -37,6 +37,7 @@ use Cowegis\Core\Definition\Preset\TooltipPresetId;
 use Cowegis\Core\Provider\Context;
 use Netzmacht\Contao\Toolkit\Data\Model\ContaoRepository;
 use Netzmacht\Contao\Toolkit\Data\Model\RepositoryManager;
+use Override;
 
 use function array_map;
 use function assert;
@@ -54,6 +55,7 @@ final class MapHydrator implements Hydrator
     ) {
     }
 
+    #[Override]
     public function supports(object $data, object $definition): bool
     {
         if (! $data instanceof MapModel) {
@@ -63,6 +65,7 @@ final class MapHydrator implements Hydrator
         return $definition instanceof Map;
     }
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($data instanceof MapModel);

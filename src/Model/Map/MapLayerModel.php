@@ -8,6 +8,7 @@ use Cowegis\Bundle\Contao\Model\LayerModel;
 use Cowegis\Bundle\Contao\Model\Model;
 use Cowegis\Core\Definition\DefinitionId\IntegerDefinitionId;
 use Cowegis\Core\Definition\Layer\LayerId;
+use Override;
 use RuntimeException;
 use Throwable;
 
@@ -33,6 +34,7 @@ final class MapLayerModel extends Model
     /**
      * {@inheritDoc}
      */
+    #[Override]
     public function __get($key)
     {
         if (isset($this->arrData[$key])) {
@@ -51,6 +53,7 @@ final class MapLayerModel extends Model
     /**
      * {@inheritDoc}
      */
+    #[Override]
     public function __isset($strKey): bool
     {
         if (parent::__isset($strKey)) {

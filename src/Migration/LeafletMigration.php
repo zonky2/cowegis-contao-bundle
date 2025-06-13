@@ -6,15 +6,18 @@ namespace Cowegis\Bundle\Contao\Migration;
 
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
+use Override;
 
 final class LeafletMigration extends AbstractMigration
 {
+    #[Override]
     public function shouldRun(): bool
     {
         // TODO: Implement shouldRun() method.
         return false;
     }
 
+    #[Override]
     public function run(): MigrationResult
     {
         // TODO:

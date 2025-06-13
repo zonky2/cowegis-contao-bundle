@@ -7,6 +7,7 @@ namespace Cowegis\Bundle\Contao\Action;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsFrontendModule;
 use Contao\Model;
 use Contao\ModuleModel;
+use Override;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -23,6 +24,7 @@ final class MapModuleAction extends MapFragmentAction
         return parent::renderAsFrontendModule($request, $model, $section, $classes);
     }
 
+    #[Override]
     protected function getIdentifier(Model $model, string|null $identifier): string
     {
         if ($identifier === null) {

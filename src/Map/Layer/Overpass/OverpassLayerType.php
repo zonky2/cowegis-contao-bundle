@@ -11,16 +11,19 @@ use Cowegis\Bundle\Contao\Model\LayerModel;
 use Cowegis\Bundle\Contao\Model\Map\MapLayerModel;
 use Cowegis\Core\Definition\Layer\Layer;
 use Cowegis\Core\Definition\Layer\OverpassLayer;
+use Override;
 
 final class OverpassLayerType implements LayerType
 {
     use MapLayerType;
 
+    #[Override]
     public function name(): string
     {
         return 'overpass';
     }
 
+    #[Override]
     public function createDefinition(LayerModel $layerModel, MapLayerModel $mapLayerModel): Layer
     {
         return new OverpassLayer(
@@ -31,6 +34,7 @@ final class OverpassLayerType implements LayerType
     }
 
     /** {@inheritDoc} */
+    #[Override]
     public function label(string $label, array $row): string
     {
         if ($row['overpassQuery'] !== null) {

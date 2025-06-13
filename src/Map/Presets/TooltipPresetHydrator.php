@@ -11,6 +11,7 @@ use Cowegis\Bundle\Contao\Model\TooltipModel;
 use Cowegis\Core\Definition\Point;
 use Cowegis\Core\Definition\Preset\TooltipPreset;
 use Cowegis\Core\Provider\Context;
+use Override;
 
 use function array_map;
 use function assert;
@@ -29,6 +30,7 @@ final class TooltipPresetHydrator extends ConfigurableOptionsHydrator
         'opacity',
     ];
 
+    #[Override]
     public function hydrate(object $data, object $definition, Context $context, Hydrator $hydrator): void
     {
         assert($data instanceof TooltipModel);
@@ -46,11 +48,13 @@ final class TooltipPresetHydrator extends ConfigurableOptionsHydrator
         );
     }
 
+    #[Override]
     protected function supportsDefinition(object $definition): bool
     {
         return $definition instanceof TooltipPreset;
     }
 
+    #[Override]
     protected function supportsData(object $data): bool
     {
         return $data instanceof TooltipModel;

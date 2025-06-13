@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Cowegis\Bundle\Contao\Map\Control\Fullscreen;
 
 use Cowegis\Bundle\Contao\Map\Control\ControlTypeHydrator;
+use Override;
 
 final class FullscreenControlTypeHydrator extends ControlTypeHydrator
 {
@@ -17,6 +18,7 @@ final class FullscreenControlTypeHydrator extends ControlTypeHydrator
         'forceSeparateButton'   => 'separate',
     ];
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'fullscreen';

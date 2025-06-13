@@ -11,22 +11,26 @@ use Cowegis\Bundle\Contao\Model\Map\MapLayerModel;
 use Cowegis\Core\Definition\Layer\FeatureGroup;
 use Cowegis\Core\Definition\Layer\Layer;
 use Cowegis\Core\Definition\Layer\LayerGroup;
+use Override;
 
 final class GroupLayerType implements NodeLayerType
 {
     use MapLayerType;
 
+    #[Override]
     public function name(): string
     {
         return 'group';
     }
 
     /** {@inheritDoc} */
+    #[Override]
     public function label(string $label, array $row): string
     {
         return $label;
     }
 
+    #[Override]
     public function createDefinition(LayerModel $layerModel, MapLayerModel $mapLayerModel): Layer
     {
         if ($layerModel->groupType === 'feature') {

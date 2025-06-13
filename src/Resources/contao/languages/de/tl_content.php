@@ -13,4 +13,3 @@ $GLOBALS['TL_LANG']['tl_content']['cowegis_template']['0'] = 'Karten-Template';
 $GLOBALS['TL_LANG']['tl_content']['cowegis_template']['1'] = 'Wählen Sie ein Template für das Erstellen der Karte aus. Das Template muss Javascript erzeugen, kein HTML.';
 $GLOBALS['TL_LANG']['tl_content']['cowegis_width']['0']    = 'Kartenbreite';
 $GLOBALS['TL_LANG']['tl_content']['cowegis_width']['1']    = 'Legen Sie die Breite der Karte fest.';
-

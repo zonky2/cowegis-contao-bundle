@@ -15,6 +15,7 @@ use Cowegis\Core\Definition\Layer\DataLayer;
 use Cowegis\Core\Definition\Layer\Layer;
 use Netzmacht\Contao\Toolkit\Data\Model\RepositoryManager;
 use Netzmacht\Contao\Toolkit\Response\ResponseTagger;
+use Override;
 
 use function assert;
 
@@ -25,11 +26,13 @@ final class FileLayerHydrator extends LayerTypeHydrator
         parent::__construct($responseTagger);
     }
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'file';
     }
 
+    #[Override]
     protected function hydrateLayer(
         LayerModel $layerModel,
         Layer $layer,

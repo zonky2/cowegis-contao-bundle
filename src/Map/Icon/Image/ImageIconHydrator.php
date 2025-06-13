@@ -15,6 +15,7 @@ use Cowegis\Core\Definition\Options;
 use Cowegis\Core\Definition\Point;
 use Netzmacht\Contao\Toolkit\Data\Model\ContaoRepository;
 use Netzmacht\Contao\Toolkit\Data\Model\RepositoryManager;
+use Override;
 
 use function assert;
 use function round;
@@ -25,11 +26,13 @@ final class ImageIconHydrator extends IconTypeHydrator
     {
     }
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'image';
     }
 
+    #[Override]
     protected function hydrateIcon(IconModel $iconModel, Icon $icon): void
     {
         $options = $icon->options();
@@ -109,6 +112,7 @@ final class ImageIconHydrator extends IconTypeHydrator
         return $repository->findByUuid($uuid);
     }
 
+    #[Override]
     protected function supportedDefinition(): string
     {
         return ImageIcon::class;

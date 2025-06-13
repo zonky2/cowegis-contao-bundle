@@ -3,9 +3,6 @@
 /**
  * Leaflet maps for Contao CMS.
  *
- * @author     David Molineus <david.molineus@netzmacht.de>
- * @copyright  2014-2018 netzmacht David Molineus. All rights reserved.
- * @license    LGPL-3.0 https://github.com/netzmacht/contao-leaflet-maps/blob/master/LICENSE
  * @filesource
  */
 

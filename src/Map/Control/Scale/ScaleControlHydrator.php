@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Cowegis\Bundle\Contao\Map\Control\Scale;
 
 use Cowegis\Bundle\Contao\Map\Control\ControlTypeHydrator;
+use Override;
 
 final class ScaleControlHydrator extends ControlTypeHydrator
 {
@@ -17,6 +18,7 @@ final class ScaleControlHydrator extends ControlTypeHydrator
         'updateWhenIdle',
     ];
 
+    #[Override]
     protected function supportedType(): string
     {
         return 'scale';

@@ -6,6 +6,7 @@ namespace Cowegis\Bundle\Contao\Map\Control;
 
 use Cowegis\Bundle\Contao\Exception\InvalidControlType;
 use IteratorAggregate;
+use Override;
 
 use function array_values;
 use function sprintf;
@@ -47,6 +48,7 @@ final class ControlTypeRegistry implements IteratorAggregate
         return $this->controlTypes[$controlType];
     }
 
+    #[Override]
     public function getIterator(): ControlTypeIterator
     {
         return new ControlTypeIterator(...array_values($this->controlTypes));
