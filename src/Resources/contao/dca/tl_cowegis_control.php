@@ -236,6 +236,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_control'] = [
                 'style'        => 'max-width: 800px',
                 'columnFields' => [
                     'layer' => [
+                        'label'     => &$GLOBALS['TL_LANG']['tl_cowegis_control']['layer'],
                         'exclude'   => true,
                         'inputType' => 'select',
                         'eval'      => [

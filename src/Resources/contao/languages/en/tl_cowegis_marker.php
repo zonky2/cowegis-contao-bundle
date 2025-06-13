@@ -2,15 +2,7 @@
 
 declare(strict_types=1);
 
-/**
- * Leaflet maps for Contao CMS.
- *
- * @author     David Molineus <david.molineus@netzmacht.de>
- * @copyright  2014-2017 netzmacht David Molineus. All rights reserved.
- * @license    LGPL-3.0 https://github.com/netzmacht/contao-leaflet-maps/blob/master/LICENSE
- * @filesource
- */
-
+// Legends
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['title_legend']   = 'Title and type';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['popup_legend']   = 'Popup';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['tooltip_legend'] = 'Tooltip';
@@ -18,7 +10,9 @@ $GLOBALS['TL_LANG']['tl_cowegis_marker']['config_legend']  = 'Configuration';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['active_legend']  = 'Activation';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['expert_legend']  = 'Expert settings';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['icon_legend']    = 'Icon';
+$GLOBALS['TL_LANG']['tl_cowegis_marker']['content_legend'] = 'Content';
 
+// Fields
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['new'][0]    = 'Create marker';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['new'][1]    = 'Create new marker';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['edit'][0]   = 'Edit marker';
@@ -66,7 +60,7 @@ $GLOBALS['TL_LANG']['tl_cowegis_marker']['active'][0]         = 'Activate marker
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['active'][1]         = 'Only activated markers are rendered on the map.';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['featureData'][0]    = 'Feature data';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['featureData'][1]    = 'The marker is transferred as GeoJSON feature. These data is passed as <em>feature.properties.data</em>.';
-$GLOBALS['TL_LANG']['tl_cowegis_marker']['markerSymbol'][0]   = 'Marker symbol';
+$GLOBALS['TL_LANG']['tl_cowegis_marker']['markerSymbol'][0]   = 'Override marker symbol';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['markerSymbol'][1]   = 'Override the marker symbol. Option is only applied if the layer uses an icon which supports custom marker symbols.';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['options'][0]        = 'Extra options';
 $GLOBALS['TL_LANG']['tl_cowegis_marker']['options'][1]        = 'Add extra marker options as valid json. See <a href="https://leafletjs.com/reference.html#marker-option">https://leafletjs.com/reference-1.7.1.html#marker-option</a>.';
