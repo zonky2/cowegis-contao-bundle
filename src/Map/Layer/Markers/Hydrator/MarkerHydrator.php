@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Cowegis\Bundle\Contao\Map\Layer\Markers\Hydrator;
 
+use Contao\CoreBundle\InsertTag\InsertTagParser;
 use Cowegis\Bundle\Contao\Hydrator\Hydrator;
 use Cowegis\Bundle\Contao\Map\Icon\IconTypeRegistry;
 use Cowegis\Bundle\Contao\Map\Options\ConfigurableOptionsHydrator;
@@ -37,6 +38,7 @@ final class MarkerHydrator extends ConfigurableOptionsHydrator
     public function __construct(
         private readonly IconTypeRegistry $iconTypes,
         private readonly IconRepository $iconRepository,
+        private readonly InsertTagParser $insertTagParser,
     ) {
     }
 
@@ -48,7 +50,7 @@ final class MarkerHydrator extends ConfigurableOptionsHydrator
 
         parent::hydrate($data, $definition, $context, $hydrator);
 
-        $definition->changeTitle($data->title);
+        $definition->changeTitle($this->insertTagParser->replaceInline($data->title));
 
         if ($context instanceof MarkerContext) {
             $this->hydrateIcon($data, $definition, $context, $hydrator);
@@ -101,7 +103,9 @@ final class MarkerHydrator extends ConfigurableOptionsHydrator
             $presetId = PopupPresetId::fromValue(IntegerDefinitionId::fromValue((int) $markerModel->popup));
         }
 
-        $definition->openPopup(new Popup((string) $markerModel->popupContent, $presetId));
+        $definition->openPopup(
+            new Popup($this->insertTagParser->replaceInline((string) $markerModel->popupContent), $presetId),
+        );
     }
 
     private function hydrateTooltip(MarkerModel $markerModel, Marker $definition, Context $context): void
@@ -119,7 +123,10 @@ final class MarkerHydrator extends ConfigurableOptionsHydrator
             $presetId = TooltipPresetId::fromValue(IntegerDefinitionId::fromValue((int) $markerModel->tooltipPreset));
         }
 
-        $toolTip = new Tooltip((string) $markerModel->tooltipContent, null, $presetId);
+        $toolTip = new Tooltip(
+            $this->insertTagParser->replaceInline((string) $markerModel->tooltipContent),
+            presetId: $presetId,
+        );
 
         $definition->showTooltip($toolTip);
     }

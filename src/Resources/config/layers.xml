@@ -68,6 +68,7 @@
         <service id="Cowegis\Bundle\Contao\Map\Layer\Markers\Hydrator\MarkerHydrator">
             <argument type="service" id="Cowegis\Bundle\Contao\Map\Icon\IconTypeRegistry" />
             <argument type="service" id="Cowegis\Bundle\Contao\Model\IconRepository" />
+            <argument type="service" id="contao.insert_tag.parser"/>
             <tag name="Cowegis\Bundle\Contao\Hydrator\Hydrator" />
         </service>
 
