@@ -38,6 +38,7 @@ final class FileLayerType implements LayerType
     {
         $repository = $this->repositoryManager->getRepository(FilesModel::class);
         assert($repository instanceof ContaoRepository);
+        /** @psalm-suppress UndefinedMagicMethod */
         $file = $repository->findByUuid($row['file']);
 
         if ($file) {

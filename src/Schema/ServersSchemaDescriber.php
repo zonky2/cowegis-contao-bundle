@@ -32,6 +32,7 @@ final class ServersSchemaDescriber implements SchemaDescriber
         $repository = $this->repositoryManager->getRepository(PageModel::class);
         assert($repository instanceof ContaoRepository);
 
+        /** @psalm-suppress UndefinedMagicMethod */
         $rootPages = $repository->findPublishedRootPages();
         if (! $rootPages instanceof Collection) {
             return;
@@ -42,7 +43,7 @@ final class ServersSchemaDescriber implements SchemaDescriber
         foreach ($rootPages as $rootPage) {
             assert($rootPage instanceof PageModel);
 
-            $key = $rootPage->dns . '.' . $rootPage->useSSL;
+            $key = $rootPage->dns . '.' . ($rootPage->useSSL ? 'https' : 'http');
 
             if (isset($added[$key])) {
                 continue;

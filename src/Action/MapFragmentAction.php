@@ -141,6 +141,7 @@ abstract class MapFragmentAction extends AbstractHybridController
             case 'custom':
                 $repository = $this->repositoryManager->getRepository(FilesModel::class);
                 assert($repository instanceof ContaoRepository);
+                /** @psalm-suppress UndefinedMagicMethod */
                 $model = $repository->findOneByUuid($model->cowegis_client_custom);
 
                 return $model ? $model->path : null;

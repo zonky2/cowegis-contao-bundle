@@ -28,6 +28,7 @@ use function strip_tags;
 final class LayerDcaListener extends AbstractListener
 {
     /**
+     * @param Adapter<Backend>           $backendAdapter
      * @param array<string,list<string>> $fileFormats
      * @param string[]                   $amenities
      */
@@ -112,7 +113,7 @@ final class LayerDcaListener extends AbstractListener
             return '';
         }
 
-        $href = Backend::addToUrl('table=' . $type->dataTable());
+        $href = $this->backendAdapter->addToUrl('table=' . $type->dataTable());
 
         return $this->generateButton($row, $href, $label, $title, $icon, $attributes);
     }
@@ -192,7 +193,7 @@ final class LayerDcaListener extends AbstractListener
     ): string {
         return sprintf(
             '<a href="%s" title="%s">%s</a> ',
-            Backend::addToUrl($href . '&amp;id=' . $row['id']),
+            $this->backendAdapter->addToUrl($href . '&amp;id=' . $row['id']),
             $title,
             Image::getHtml($icon, $label, $attributes),
         );

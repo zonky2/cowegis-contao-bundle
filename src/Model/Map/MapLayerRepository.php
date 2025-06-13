@@ -39,6 +39,7 @@ SQL;
 
         $result = $this->connection->executeQuery($sql, ['pid' => $layerId]);
 
+        /** @psalm-suppress UndefinedMagicMethod */
         return $this->findMultipleByIds($result->fetchFirstColumn(), $options);
     }
 

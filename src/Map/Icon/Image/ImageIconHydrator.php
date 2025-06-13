@@ -109,6 +109,7 @@ final class ImageIconHydrator extends IconTypeHydrator
         $repository = $this->repositoryManager->getRepository(FilesModel::class);
         assert($repository instanceof ContaoRepository);
 
+        /** @psalm-suppress UndefinedMagicMethod */
         return $repository->findByUuid($uuid);
     }
 

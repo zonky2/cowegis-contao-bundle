@@ -69,6 +69,7 @@ final class ControlDcaListener extends AbstractListener
             ['mapId' => $multiColumnWizard->dataContainer->currentPid],
         );
 
+        /** @psalm-suppress UndefinedMagicMethod */
         $collection = $this->layerRepository->findMultipleByIds($result->fetchFirstColumn(), ['order' => 'sorting']);
 
         $options = [];

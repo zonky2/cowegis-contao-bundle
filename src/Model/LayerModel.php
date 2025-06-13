@@ -28,6 +28,7 @@ use Cowegis\Core\Definition\Layer\LayerId;
  * @property string|null             $vectors
  * @property string|int              $cacheLifeTime
  * @property string|int|bool         $cache
+ * @psalm-suppress ClassMustBeFinal
  */
 class LayerModel extends Model
 {

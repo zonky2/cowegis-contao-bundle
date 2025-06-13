@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Cowegis\Bundle\Contao\Model;
 
+/** @psalm-suppress ClassMustBeFinal */
 class StyleModel extends Model
 {
     /** @var string */

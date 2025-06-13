@@ -232,6 +232,7 @@ final class MapHydrator implements Hydrator
         }
 
         assert($repository instanceof ContaoRepository);
+        /** @psalm-suppress UndefinedMagicMethod */
         $collection = $repository->findMultipleByUuids($uuids, $options) ?: [];
 
         foreach ($collection as $fileModel) {

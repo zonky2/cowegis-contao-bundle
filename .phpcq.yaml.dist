@@ -7,6 +7,12 @@ phpcq:
     - spec
   artifact: .phpcq/build
   plugins:
+    doctrine-coding-standard:
+      version: ^1.0
+      signed: false
+      requirements:
+        composer:
+          doctrine/coding-standard: ^13.0
     composer-normalize:
       version: ^1.0
       signed: false
@@ -69,11 +75,13 @@ tasks:
       dry_run: false
       ignore_output:
         - '#> pre-command-run: Contao\\ManagerPlugin\\Composer\\ArtifactsPlugin->preCommandRun#'
+        - '#Root package is not of type "project" or "contao-theme", we will not be installing Contao extensions.#'
     plugin: composer-normalize
   composer-normalize:
     config:
       ignore_output:
         - '#> pre-command-run: Contao\\ManagerPlugin\\Composer\\ArtifactsPlugin->preCommandRun#'
+        - '#Root package is not of type "project" or "contao-theme", we will not be installing Contao extensions.#'
   composer-require-checker:
     config:
       config_file: .composer-require-checker.json
@@ -82,6 +90,8 @@ tasks:
       exclude:
         - src/Resources/contao/dca/tl_cowegis_popup.php
         - src/Resources/contao/dca/tl_cowegis_style.php
+        - src/Resources/contao/dca/tl_cowegis_icon.php
+        - src/Resources/contao/dca/tl_cowegis_control.php
   rector-fix:
     config:
       dry-run: false
@@ -89,14 +99,14 @@ tasks:
   phpcs:
     config:
       standard: ~
-      standard_paths:
-        - ./vendor/slevomat/coding-standard
-        - ./vendor/doctrine/coding-standard/lib
+    uses:
+      doctrine-coding-standard:
+        phpcs_standard: ignore
   phpcbf:
     plugin: phpcs
     config:
       standard: ~
-      standard_paths:
-        - ./vendor/slevomat/coding-standard
-        - ./vendor/doctrine/coding-standard/lib
       fix: true
+    uses:
+      doctrine-coding-standard:
+        phpcs_standard: ignore

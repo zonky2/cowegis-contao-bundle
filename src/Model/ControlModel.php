@@ -19,6 +19,7 @@ use Cowegis\Core\Definition\DefinitionId\IntegerDefinitionId;
  * @property string|null              $spin
  * @property numeric-string|int       $zoomControl
  * @property string                   $geocoder
+ * @psalm-suppress ClassMustBeFinal
  */
 class ControlModel extends Model
 {

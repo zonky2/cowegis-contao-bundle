@@ -39,6 +39,7 @@ final class MapDcaListener extends AbstractListener
         $strReturn = '';
 
         while ($records->next()) {
+            /** @psalm-suppress UndefinedMagicPropertyFetch */
             $strReturn .= '<li>' . $records->name . ' (ID: ' . $records->id . ') </li>';
         }
 

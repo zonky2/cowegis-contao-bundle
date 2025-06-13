@@ -19,6 +19,7 @@ namespace Cowegis\Bundle\Contao\Model;
  * @property numeric-string|int|float $longitude
  * @property numeric-string|int|float $altitude
  * @property string|null              $tooltipContent
+ * @psalm-suppress ClassMustBeFinal
  */
 class MarkerModel extends Model
 {
