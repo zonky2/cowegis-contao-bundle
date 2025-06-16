@@ -76,7 +76,9 @@ final class OverpassLayerHydrator extends LayerTypeHydrator
                 continue;
             }
 
-            $amenityIconsMap[$config['amenity']] = IconId::fromValue(IntegerDefinitionId::fromValue($config['icon']));
+            $amenityIconsMap[$config['amenity']] = IconId::fromValue(
+                IntegerDefinitionId::fromValue((int) $config['icon']),
+            );
         }
 
         return $amenityIconsMap;
