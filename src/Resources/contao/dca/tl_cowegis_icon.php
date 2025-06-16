@@ -416,7 +416,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_icon'] = [
         'content'           => [
             'exclude'   => true,
             'inputType' => 'text',
-            'eval'      => ['tl_class' => 'w50'],
+            'eval'      => ['tl_class' => 'w50', 'decodeEntities' => true,],
             'sql'       => 'varchar(64) NOT NULL default \'\'',
         ],
     ],
