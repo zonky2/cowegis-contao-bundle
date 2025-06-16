@@ -38,6 +38,11 @@
             <tag name="contao.callback" table="tl_content" target="fields.cowegis_client.options" method="clientOptions" />
         </service>
 
+        <service id="Cowegis\Bundle\Contao\EventListener\Dca\ModuleDcaListener" autoconfigure="true">
+            <argument type="service" id="netzmacht.contao_toolkit.dca.manager"/>
+            <argument>%cowegis_contao.client_bundle%</argument>
+        </service>
+
         <service id="Cowegis\Bundle\Contao\EventListener\Dca\LayerDcaListener" public="true">
             <argument type="service" id="netzmacht.contao_toolkit.dca.manager" />
             <argument type="service" id="Cowegis\Bundle\Contao\Map\Layer\LayerTypeRegistry" />
