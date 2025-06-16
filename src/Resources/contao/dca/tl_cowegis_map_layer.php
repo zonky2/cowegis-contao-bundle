@@ -40,6 +40,9 @@ $GLOBALS['TL_DCA']['tl_cowegis_map_layer'] = [
             '+config'  => ['adjustBounds'],
             '+active' => ['dataPane'],
         ],
+        'overpass extends default' => [
+            '+config'  => ['adjustBounds'],
+        ],
     ],
     'list'         => [
         'sorting'    => [

@@ -39,6 +39,7 @@ final class OverpassLayerHydrator extends LayerTypeHydrator
         Hydrator $hydrator,
     ): void {
         $layer->options()->set('amenityIcons', $this->buildAmenityIcons($layerModel));
+        $layer->options()->set('adjustBounds', (bool) $context->mapLayerModel()->adjustBounds);
 
         if ($layerModel->pointToLayer !== null) {
             $layer->options()->set(
