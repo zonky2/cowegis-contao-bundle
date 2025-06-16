@@ -12,14 +12,6 @@
     </projectFiles>
 
     <issueHandlers>
-        <InternalMethod>
-            <errorLevel type="suppress">
-                <referencedMethod name="Contao\CoreBundle\Framework\ContaoFramework::createInstance"/>
-                <referencedMethod name="Contao\CoreBundle\Framework\ContaoFramework::initialize"/>
-                <referencedMethod name="Contao\CoreBundle\Framework\Adapter::__call"/>
-            </errorLevel>
-        </InternalMethod>
-
         <UndefinedMagicPropertyFetch>
             <errorLevel type="suppress">
                 <referencedProperty name="Contao\ContentModel::$cowegis_map"/>

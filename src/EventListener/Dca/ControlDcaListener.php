@@ -59,8 +59,8 @@ final class ControlDcaListener extends AbstractListener
     /** @return array<int,string> */
     public function layerOptions(MultiColumnWizard $multiColumnWizard): array
     {
-        /** @psalm-suppress DocblockTypeContradiction */
-        if (0 === ((int) $multiColumnWizard->dataContainer->currentPid)) {
+        /** @psalm-suppress RedundantCastGivenDocblockType */
+        if (((int) $multiColumnWizard->dataContainer->currentPid) === 0) {
             return [];
         }
 

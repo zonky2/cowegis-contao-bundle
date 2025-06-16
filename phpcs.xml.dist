@@ -9,6 +9,8 @@
     <!-- Ignore warnings, show progress of the run and show sniff names -->
     <arg value="nps"/>
 
+    <autoload>.phpcq/plugins/doctrine-coding-standard/vendor/autoload.php</autoload>
+
     <!-- Directories to be checked -->
     <file>src</file>
     <file>spec</file>

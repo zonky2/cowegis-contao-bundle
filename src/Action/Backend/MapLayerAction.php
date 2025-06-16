@@ -98,6 +98,7 @@ final class MapLayerAction
         $collection      = $layerRepository->findBy(['.pid=?'], [$layerModel->id()]) ?: [];
 
         foreach ($collection as $child) {
+            assert($child instanceof LayerModel);
             $this->activateLayer($mapModel, $child);
         }
     }

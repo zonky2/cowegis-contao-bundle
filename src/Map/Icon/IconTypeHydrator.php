@@ -19,9 +19,7 @@ use function is_a;
 abstract class IconTypeHydrator extends ConfigurableOptionsHydrator
 {
     /** @var list<string>|array<string,string> */
-    protected static array $options = [
-        'className' => 'className',
-    ];
+    protected static array $options = ['className' => 'className'];
 
     /** @var list<string>|array<string,string> */
     protected static array $pointOptions = [

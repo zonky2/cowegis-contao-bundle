@@ -13,6 +13,7 @@ use function sprintf;
 
 final class MapPaneDcaListener extends AbstractListener
 {
+    // phpcs:ignore SlevomatCodingStandard.TypeHints.ClassConstantTypeHint.MissingNativeTypeHint
     private const RESERVED_PANE_NAMES = [
         'mapPane',
         'tilePane',
