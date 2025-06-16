@@ -13,7 +13,7 @@ use function sprintf;
 
 final class MapPaneDcaListener extends AbstractListener
 {
-    private const array RESERVED_PANE_NAMES = [
+    private const RESERVED_PANE_NAMES = [
         'mapPane',
         'tilePane',
         'overlayPane',
