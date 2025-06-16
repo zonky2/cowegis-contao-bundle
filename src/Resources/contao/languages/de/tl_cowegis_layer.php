@@ -24,8 +24,7 @@ $GLOBALS['TL_LANG']['tl_cowegis_layer']['attribution']['0']                = 'Na
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['attribution']['1']                =
     'Geben Sie das Copyright des Layers ein. Beachten Sie die jeweiligen Nutzungsbedingungen.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['bounds']['0']                     = 'Begrenzungen';
-$GLOBALS['TL_LANG']['tl_cowegis_layer']['boundsMode']['1']                 =
-    'Wählen Sie aus, auf welche Weise die Layerdaten die Darstellungsgrenzen beeinflussen.';
+$GLOBALS['TL_LANG']['tl_cowegis_layer']['bounds'][1]                       = 'Wenn diese Option gesetzt ist, lädt der TileLayer nur Kacheln, die sich innerhalb der angegebenen geografischen Grenzen befinden. Jedes Feld definiert eine Ecke der Grenzen als kommagetrennter Wert (Breitengrad, Längengrad[, Höhe]).';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['cache']['0']                      = 'Cache aktivieren';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['cache']['1']                      =
     'Falls ausgewählt werden dynamisch geladene Daten gecached.';
