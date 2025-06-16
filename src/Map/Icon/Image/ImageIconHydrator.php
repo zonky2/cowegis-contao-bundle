@@ -24,6 +24,7 @@ final class ImageIconHydrator extends IconTypeHydrator
 {
     public function __construct(private readonly RepositoryManager $repositoryManager)
     {
+        self::$pointOptions[] = 'shadowAnchor';
     }
 
     #[Override]

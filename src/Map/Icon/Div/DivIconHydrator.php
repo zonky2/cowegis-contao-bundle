@@ -16,14 +16,6 @@ final class DivIconHydrator extends IconTypeHydrator
         'className',
     ];
 
-    /** @var list<string>|array<string,string> */
-    protected static array $pointOptions = [
-        'iconSize',
-        'iconAnchor',
-        'popupAnchor',
-        'tooltipAnchor',
-    ];
-
     #[Override]
     protected function supportedType(): string
     {

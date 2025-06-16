@@ -18,6 +18,19 @@ use function is_a;
 
 abstract class IconTypeHydrator extends ConfigurableOptionsHydrator
 {
+    /** @var list<string>|array<string,string> */
+    protected static array $options = [
+        'className' => 'className',
+    ];
+
+    /** @var list<string>|array<string,string> */
+    protected static array $pointOptions = [
+        'iconSize',
+        'iconAnchor',
+        'popupAnchor',
+        'tooltipAnchor',
+    ];
+
     #[Override]
     public function supports(object $data, object $definition): bool
     {

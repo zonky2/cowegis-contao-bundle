@@ -21,14 +21,6 @@ final class FontAwesomeIconHydrator extends IconTypeHydrator
         'icon'      => 'icon',
     ];
 
-    /** @var list<string>|array<string,string> */
-    protected static array $pointOptions = [
-        'iconSize',
-        'iconAnchor',
-        'popupAnchor',
-        'tooltipAnchor',
-    ];
-
     #[Override]
     protected function supportedType(): string
     {
