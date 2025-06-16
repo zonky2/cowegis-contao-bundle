@@ -22,7 +22,7 @@ $GLOBALS['TL_LANG']['tl_cowegis_layer']['animateAddingMarkers']['1']       =
     'Falls angewählt werden Marker, die einer Clustergruppe hinzugefügt werden animiert.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['attribution']['0']                = 'Namensnennung';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['attribution']['1']                =
-    'Geben Sie das Copyright des Kachellayer-Anbieters ein. Beachten Sie die jeweiligen Nutzungsbedingungen.';
+    'Geben Sie das Copyright des Layers ein. Beachten Sie die jeweiligen Nutzungsbedingungen.';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['bounds']['0']                     = 'Begrenzungen';
 $GLOBALS['TL_LANG']['tl_cowegis_layer']['boundsMode']['1']                 =
     'Wählen Sie aus, auf welche Weise die Layerdaten die Darstellungsgrenzen beeinflussen.';
