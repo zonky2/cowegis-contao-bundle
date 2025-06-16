@@ -15,6 +15,7 @@ final class MarkerOptionsHydrator extends ConfigurableOptionsHydrator
 {
     /** @var list<string>|array<string,string> */
     protected static array $options = [
+        'attribution',
         'interactive',
         'draggable',
         'keyboard',
