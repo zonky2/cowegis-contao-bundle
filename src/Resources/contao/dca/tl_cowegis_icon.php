@@ -179,7 +179,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_icon'] = [
                 'submitOnChange'     => true,
                 'chosen'             => true,
             ],
-            'reference' => &$GLOBALS['TL_LANG']['leaflet_icon'],
+            'reference' => &$GLOBALS['TL_LANG']['tl_cowegis_icon']['icon_type'],
             'sql'       => "varchar(32) NOT NULL default ''",
         ],
         'active'            => [
@@ -392,7 +392,8 @@ $GLOBALS['TL_DCA']['tl_cowegis_icon'] = [
             'exclude'   => true,
             'inputType' => 'radio',
             'default'   => 'solid',
-            'options'   => ['solid', 'brands', 'regular'],
+            'options'   => ['regular', 'solid', 'brands'],
+            'reference' => &$GLOBALS['TL_LANG']['tl_cowegis_icon']['faIconSet'],
             'eval'      => ['tl_class' => 'w50'],
             'sql'       => 'varchar(64) NULL',
         ],
