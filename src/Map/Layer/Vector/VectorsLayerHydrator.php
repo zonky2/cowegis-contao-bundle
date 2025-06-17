@@ -9,6 +9,7 @@ use Cowegis\Bundle\Contao\Map\GeoData\RawGeoJsonGeoData;
 use Cowegis\Bundle\Contao\Map\Layer\LayerTypeHydrator;
 use Cowegis\Bundle\Contao\Model\LayerModel;
 use Cowegis\Bundle\Contao\Provider\MapLayerContext;
+use Cowegis\Core\Definition\Expression\InlineExpression;
 use Cowegis\Core\Definition\GeoData\GeoData;
 use Cowegis\Core\Definition\GeoData\UriData;
 use Cowegis\Core\Definition\Layer\DataLayer;
@@ -42,6 +43,20 @@ final class VectorsLayerHydrator extends LayerTypeHydrator
     ): void {
         assert($layer instanceof DataLayer);
         $layer->options()->set('adjustBounds', (bool) $context->mapLayerModel()->adjustBounds);
+
+        if ($layerModel->pointToLayer !== null) {
+            $layer->options()->set(
+                'pointToLayer',
+                $context->callbacks()->add(new InlineExpression($layerModel->pointToLayer)),
+            );
+        }
+
+        if ($layerModel->onEachFeature !== null) {
+            $layer->options()->set(
+                'onEachFeature',
+                $context->callbacks()->add(new InlineExpression($layerModel->onEachFeature)),
+            );
+        }
 
         if ((bool) $layerModel->deferred) {
             $layer->withData(
