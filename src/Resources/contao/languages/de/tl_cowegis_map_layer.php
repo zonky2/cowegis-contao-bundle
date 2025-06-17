@@ -22,7 +22,7 @@ $GLOBALS['TL_LANG']['tl_cowegis_map_layer']['filterRules']['1']       =
 $GLOBALS['TL_LANG']['tl_cowegis_map_layer']['active']['0']            = 'Aktiv';
 $GLOBALS['TL_LANG']['tl_cowegis_map_layer']['active']['1']            =
     'Wenn aktiviert, steht das Layer für die Karte zur Verfügung';
-$GLOBALS['TL_LANG']['tl_cowegis_map_layer']['initialVisible']['0']    = 'Standardlayer';
+$GLOBALS['TL_LANG']['tl_cowegis_map_layer']['initialVisible']['0']    = 'Als Standardlayer anzeigen';
 $GLOBALS['TL_LANG']['tl_cowegis_map_layer']['initialVisible']['1']    =
     'Ein Standardlayer wird automatisch auf der Karte angezeigt. Falls die Karte über ein Kontrollelement optional aktiviert werden soll, kann dies deaktiviert werden.';
 $GLOBALS['TL_LANG']['tl_cowegis_map_layer']['pane']['0']              = 'Individueller Bereich';
@@ -35,3 +35,6 @@ $GLOBALS['TL_LANG']['tl_cowegis_map_layer']['rules']['keyword']['1']  = 'Filterr
 $GLOBALS['TL_LANG']['tl_cowegis_map_layer']['rules']['bbox']['0']     = 'Begrenzungsrahmen';
 $GLOBALS['TL_LANG']['tl_cowegis_map_layer']['rules']['bbox']['1']     =
     'Filterregel über einen Begrenzungsrahmen (bounding box)';
+$GLOBALS['TL_LANG']['tl_cowegis_map_layer']['adjustBounds'][0]        = 'Grenzen anpassen';
+$GLOBALS['TL_LANG']['tl_cowegis_map_layer']['adjustBounds'][1]        =
+    'Wenn der Layer aktiviert ist, werden die Kartengrenzen angepasst.';

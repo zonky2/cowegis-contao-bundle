@@ -98,7 +98,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_map_layer'] = [
             'inputType' => 'checkbox',
             'filter'    => true,
             'default'   => true,
-            'eval'      => ['tl_class' => 'w50 ,12'],
+            'eval'      => ['tl_class' => 'w50 m12'],
             'sql'       => ['type' => 'boolean', 'default' => 1],
         ],
         'adjustBounds' => [
@@ -106,7 +106,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_map_layer'] = [
             'inputType' => 'checkbox',
             'filter'    => true,
             'default'   => false,
-            'eval'      => ['tl_class' => 'w50 ,12'],
+            'eval'      => ['tl_class' => 'w50 m12'],
             'sql'       => ['type' => 'boolean', 'default' => 0],
         ],
         'active'         => [
