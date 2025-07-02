@@ -71,6 +71,10 @@
             <argument type="tagged_iterator" tag="Cowegis\Bundle\Contao\Map\Icon\IconType" />
         </service>
 
+        <service id="Cowegis\Bundle\Contao\Map\Style\StyleTypeRegistry">
+            <argument type="tagged_iterator" tag="Cowegis\Bundle\Contao\Map\Style\StyleType" />
+        </service>
+
         <service id="Cowegis\Bundle\Contao\Schema\ServersSchemaDescriber">
             <argument type="service" id="netzmacht.contao_toolkit.repository_manager"/>
             <argument type="service" id="request_stack"/>

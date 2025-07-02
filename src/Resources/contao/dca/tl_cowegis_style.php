@@ -92,7 +92,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_style'] = [
     ],
 
     'metasubpalettes' => [
-        'stroke' => ['color', 'weight', 'opacity', 'dashArray', 'lineCap', 'lineJoin'],
+        'stroke' => ['color', 'weight', 'opacity', 'dashArray', 'dashOffset', 'lineCap', 'lineJoin'],
         'fill'   => ['fillColor', 'fillOpacity'],
     ],
 
@@ -127,8 +127,9 @@ $GLOBALS['TL_DCA']['tl_cowegis_style'] = [
                 'includeBlankOption' => true,
                 'submitOnChange'     => true,
                 'chosen'             => true,
+                'helpwizard'         => true,
             ],
-            'reference'        => &$GLOBALS['TL_LANG']['leaflet_style'],
+            'reference'        => &$GLOBALS['TL_LANG']['cowegis_style'],
             'sql'              => "varchar(32) NOT NULL default ''",
         ],
         'stroke'      => [
@@ -195,6 +196,12 @@ $GLOBALS['TL_DCA']['tl_cowegis_style'] = [
             'exclude'   => true,
             'inputType' => 'text',
             'eval'      => ['mandatory' => false, 'maxlength' => 32, 'tl_class' => 'w50'],
+            'sql'       => "varchar(32) NOT NULL default ''",
+        ],
+        'dashOffset'   => [
+            'exclude'   => true,
+            'inputType' => 'text',
+            'eval'      => ['mandatory' => false, 'maxlength' => 32, 'tl_class' => 'w50', 'rgxp' => 'digit'],
             'sql'       => "varchar(32) NOT NULL default ''",
         ],
         'lineCap'     => [

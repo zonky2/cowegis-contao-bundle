@@ -60,6 +60,9 @@ $GLOBALS['TL_LANG']['cowegis_vector']['rectangle'][1]     = 'Rectangle overlay. 
 $GLOBALS['TL_LANG']['cowegis_icon']['svg'][0] = 'SVG icon';
 $GLOBALS['TL_LANG']['cowegis_icon']['svg'][1] = 'SVG icon';
 
+$GLOBALS['TL_LANG']['cowegis_style']['fixed'][0] = 'Fixed';
+$GLOBALS['TL_LANG']['cowegis_style']['fixed'][1] = 'Apply fixed style pattern to each vector.';
+
 $GLOBALS['TL_LANG']['cowegis']['searchPosition'] = 'Search location';
 $GLOBALS['TL_LANG']['cowegis']['applyPosition']  = 'Apply position';
 

@@ -28,6 +28,7 @@ final class CowegisContaoExtension extends Extension
         $loader->load('fragments.xml');
         $loader->load('hydrators.xml');
         $loader->load('icons.xml');
+        $loader->load('styles.xml');
         $loader->load('layers.xml');
         $loader->load('listeners.xml');
         $loader->load('services.xml');
