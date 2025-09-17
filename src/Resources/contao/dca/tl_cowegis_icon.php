@@ -179,7 +179,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_icon'] = [
                 'submitOnChange'     => true,
                 'chosen'             => true,
             ],
-            'reference' => &$GLOBALS['TL_LANG']['tl_cowegis_icon']['icon_type'],
+            'reference' => &$GLOBALS['TL_LANG']['leaflet_icon'],
             'sql'       => "varchar(32) NOT NULL default ''",
         ],
         'active'            => [
