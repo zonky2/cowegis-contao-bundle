@@ -43,7 +43,7 @@ final class Plugin implements BundlePluginInterface, RoutingPluginInterface
 
     /** @SuppressWarnings(PHPMD.UnusedFormalParameter) */
     #[Override]
-    public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel): RouteCollection|null
+    public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel): RouteCollection
     {
         $routeCollection = new RouteCollection();
 

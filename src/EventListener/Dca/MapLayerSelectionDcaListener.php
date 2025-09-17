@@ -58,7 +58,7 @@ final class MapLayerSelectionDcaListener extends AbstractListener
         $definition = $this->getDefinition();
         $definition->modify(
             ['config'],
-            static function (array $config) {
+            static function (array $config): array {
                 $config['closed']       = true;
                 $config['notCopyable']  = true;
                 $config['notCreatable'] = true;
