@@ -70,10 +70,6 @@ $GLOBALS['TL_LANG']['tl_cowegis_icon']['iconSize'][0]            = 'Icon-Größe
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['iconSize'][1]            = 'Icon-Größe in Pixeln in komma-separierte Werte, z. B. <em>20,40</em>.';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['faIconSet'][0]           = 'Font Awesome Icon Set';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['faIconSet'][1]           = 'Bitte wählen Sie das bevorzugte <a href="https://fontawesome.com/v6/search?ic=free" target="_blank">Font Awesome Icon Set</a>';
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['backgroundColor'][0]     = 'Hintergrundfarbe';
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['backgroundColor'][1]     = 'Wählen Sie eine Farbe für den Hintergrund aus.';
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['html'][0]                = 'HTML-Quelltext';
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['html'][1]                = 'Geben Sie Ihren HTML-Quelltext ein - Sie können HTML- oder SVG-Quelltext einfügen.';
 
 // Reference
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['icon_type']['image']       = 'Bild-Datei';
