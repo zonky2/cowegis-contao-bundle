@@ -77,7 +77,7 @@ $GLOBALS['TL_LANG']['tl_cowegis_icon']['iconSize'][1]          = 'Icon size in p
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['faIconSet'][0]         = 'Font Awesome Icon Set';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['faIconSet'][1]         = 'Please select the preferred <a href="https://fontawesome.com/v6/search?ic=free" target="_blank">Font Awesome Icon Set</a>';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['backgroundColor'][0]   = 'Background color';
-$GLOBALS['TL_LANG']['tl_cowegis_icon']['backgroundColor'][1]   = 'Define a custom backgrund color here.';
+$GLOBALS['TL_LANG']['tl_cowegis_icon']['backgroundColor'][1]   = 'Define a custom background color here.';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['html'][0]              = 'HTML source code';
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['html'][1]              = 'Add your own HTML source code - you can add HTML or SVG source code.';
 
