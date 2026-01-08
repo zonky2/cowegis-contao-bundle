@@ -55,5 +55,9 @@
         <service id="Cowegis\Bundle\Contao\Model\TooltipRepository">
             <tag name="netzmacht.contao_toolkit.repository" model="Cowegis\Bundle\Contao\Model\TooltipModel" />
         </service>
+
+        <service id="Cowegis\Bundle\Contao\Model\StyleRepository">
+            <tag name="netzmacht.contao_toolkit.repository" model="Cowegis\Bundle\Contao\Model\StyleModel" />
+        </service>
     </services>
 </container>

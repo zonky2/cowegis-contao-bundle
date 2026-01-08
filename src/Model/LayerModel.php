@@ -21,6 +21,7 @@ use Cowegis\Core\Definition\Layer\LayerId;
  * @property string|null             $pointToLayer
  * @property string|null             $popup
  * @property numeric-string|int      $reference
+ * @property numeric-string|int      $style
  * @property string                  $title
  * @property string                  $tileUrl
  * @property string|null             $tooltip

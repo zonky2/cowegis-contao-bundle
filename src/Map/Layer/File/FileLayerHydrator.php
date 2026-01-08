@@ -48,6 +48,13 @@ final class FileLayerHydrator extends LayerTypeHydrator
             );
         }
 
+        if ($layerModel->onEachFeature !== null) {
+            $layer->options()->set(
+                'onEachFeature',
+                $context->callbacks()->add(new InlineExpression($layerModel->onEachFeature)),
+            );
+        }
+
         $repository = $this->repositoryManager->getRepository(FilesModel::class);
         $fileModel  = $repository->findOneBy(['.uuid=?'], [$layerModel->file]);
 

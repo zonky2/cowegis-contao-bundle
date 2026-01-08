@@ -46,7 +46,9 @@ $GLOBALS['TL_LANG']['tl_cowegis_style']['weight'][1]      = 'Stroke width in pix
 $GLOBALS['TL_LANG']['tl_cowegis_style']['opacity'][0]     = 'Stroke opacity';
 $GLOBALS['TL_LANG']['tl_cowegis_style']['opacity'][1]     = 'Stroke opacity as a value between 0 and 1.';
 $GLOBALS['TL_LANG']['tl_cowegis_style']['dashArray'][0]   = 'Stroke dash pattern';
-$GLOBALS['TL_LANG']['tl_cowegis_style']['dashArray'][1]   = 'A string that defines the stroke <a href="https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray" target="_blank">dash pattern</a>.';
+$GLOBALS['TL_LANG']['tl_cowegis_style']['dashArray'][1]   = 'A string that defines the stroke <a href="https://developer.mozilla.org/en/SVG/Attribute/stroke-dasharray" target="_blank" rel="noreferrer nofollow">dash pattern</a>.';
+$GLOBALS['TL_LANG']['tl_cowegis_style']['dashOffset'][0]  = 'Stroke dash offset';
+$GLOBALS['TL_LANG']['tl_cowegis_style']['dashOffset'][1]  = 'A string that defines the <a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-dashoffset" target="_blank" rel="noreferrer nofollow">distance into the dash pattern to start the dash</a>.';
 $GLOBALS['TL_LANG']['tl_cowegis_style']['fill'][0]        = 'Fill vector';
 $GLOBALS['TL_LANG']['tl_cowegis_style']['fill'][1]        = 'Whether to fill the withPathItem with color.';
 $GLOBALS['TL_LANG']['tl_cowegis_style']['fillColor'][0]   = 'Fill color';
@@ -54,6 +56,8 @@ $GLOBALS['TL_LANG']['tl_cowegis_style']['fillColor'][1]   = 'Custom stroke color
 $GLOBALS['TL_LANG']['tl_cowegis_style']['fillOpacity'][0] = 'Fill opacity';
 $GLOBALS['TL_LANG']['tl_cowegis_style']['fillOpacity'][1] = 'Fill opacity as a value between 0 and 1.';
 $GLOBALS['TL_LANG']['tl_cowegis_style']['lineCap'][0]     = 'Stroke line cap';
-$GLOBALS['TL_LANG']['tl_cowegis_style']['lineCap'][1]     = 'A string that defines <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap" target="_blank">shape to be used at the end</a> of the stroke.';
+$GLOBALS['TL_LANG']['tl_cowegis_style']['lineCap'][1]     = 'A string that defines <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap" target="_blank" rel="noreferrer nofollow">shape to be used at the end</a> of the stroke.';
 $GLOBALS['TL_LANG']['tl_cowegis_style']['lineJoin'][0]    = 'Stroke line join';
-$GLOBALS['TL_LANG']['tl_cowegis_style']['lineJoin'][1]    = 'A string that defines <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin" target="_blank">shape to be used at the corners</a> of the stroke.';
+$GLOBALS['TL_LANG']['tl_cowegis_style']['lineJoin'][1]    = 'A string that defines <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin" target="_blank" rel="noreferrer nofollow">shape to be used at the corners</a> of the stroke.';
+$GLOBALS['TL_LANG']['tl_cowegis_style']['active']['0']    = 'Active';
+$GLOBALS['TL_LANG']['tl_cowegis_style']['active']['1']    = 'Activate the style.';

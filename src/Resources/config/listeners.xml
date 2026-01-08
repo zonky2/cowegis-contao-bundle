@@ -143,6 +143,11 @@
 
         </service>
 
+        <service id="Cowegis\Bundle\Contao\EventListener\Dca\StyleDcaListener" autoconfigure="true">
+            <argument type="service" id="netzmacht.contao_toolkit.dca.manager"/>
+            <argument type="service" id="Cowegis\Bundle\Contao\Map\Style\StyleTypeRegistry"/>
+        </service>
+
         <service id="Cowegis\Bundle\Contao\EventListener\Dca\AliasGenerator">
             <argument type="service" id="cowegis_contao.slug_generator" />
             <argument type="service" id="database_connection" />

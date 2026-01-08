@@ -71,7 +71,7 @@ abstract class MapFragmentAction extends AbstractHybridController
                 'cowegis_api_map',
                 array_merge(
                     $this->createFilter($request)->toQuery()->toArray(),
-                    ['mapId' => $model->cowegis_map, '_locale' => $GLOBALS['TL_LANGUAGE'], 'es5' => true],
+                    ['mapId' => $model->cowegis_map, '_locale' => $GLOBALS['TL_LANGUAGE']],
                 ),
             );
         } catch (InvalidParameterException) {

@@ -66,6 +66,9 @@ $GLOBALS['TL_LANG']['tl_cowegis_icon']['html'][0]            = 'HTML source code
 $GLOBALS['TL_LANG']['tl_cowegis_icon']['html'][1]            =
     'Add your own HTML source code - you can add HTML or SVG source code.';
 
+$GLOBALS['TL_LANG']['cowegis_style']['fixed'][0] = 'Fixed';
+$GLOBALS['TL_LANG']['cowegis_style']['fixed'][1] = 'Apply fixed style pattern to each vector.';
+
 $GLOBALS['TL_LANG']['cowegis']['searchPosition'] = 'Search location';
 $GLOBALS['TL_LANG']['cowegis']['applyPosition']  = 'Apply position';
 

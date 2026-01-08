@@ -9,4 +9,8 @@ use Netzmacht\Contao\Toolkit\Data\Model\ContaoRepository;
 /** @extends ContaoRepository<StyleModel> */
 final class StyleRepository extends ContaoRepository
 {
+    public function __construct()
+    {
+        parent::__construct(StyleModel::class);
+    }
 }

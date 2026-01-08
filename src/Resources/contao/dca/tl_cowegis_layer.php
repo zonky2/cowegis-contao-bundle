@@ -112,6 +112,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_layer'] = [
         ],
         'vectors extends default'       => [
             '+expert' => ['onEachFeature', 'pointToLayer'],
+            '+style'  => ['style'],
             '+config' => ['vectors', 'deferred'],
         ],
         'reference extends default'     => [
@@ -634,10 +635,10 @@ $GLOBALS['TL_DCA']['tl_cowegis_layer'] = [
                         ],
                     ],
                     'icon'    => [
-                        'label'     => &$GLOBALS['TL_LANG']['tl_cowegis_layer']['amenityIcon'],
-                        'exclude'   => true,
-                        'inputType' => 'select',
-                        'eval'      => [
+                        'label'      => &$GLOBALS['TL_LANG']['tl_cowegis_layer']['amenityIcon'],
+                        'exclude'    => true,
+                        'inputType'  => 'select',
+                        'eval'       => [
                             'mandatory'          => false,
                             'style'              => 'width: 100%',
                             'chosen'             => true,
@@ -723,6 +724,18 @@ $GLOBALS['TL_DCA']['tl_cowegis_layer'] = [
             'foreignKey' => 'tl_cowegis_tooltip.title',
             'sql'        => "int(10) unsigned NOT NULL default '0'",
         ],
+        'style'                          => [
+            'exclude'    => true,
+            'inputType'  => 'select',
+            'eval'       => [
+                'mandatory'          => false,
+                'tl_class'           => 'clr w50',
+                'chosen'             => true,
+                'includeBlankOption' => true,
+            ],
+            'foreignKey' => 'tl_cowegis_style.title',
+            'sql'        => "int(10) unsigned NOT NULL default '0'",
+        ],
         'interactive'                    => [
             'exclude'   => true,
             'inputType' => 'checkbox',
@@ -765,7 +778,7 @@ $GLOBALS['TL_DCA']['tl_cowegis_layer'] = [
             'eval'      => ['maxlength' => 5, 'rgxp' => 'digit', 'tl_class' => 'clr w50', 'nullIfEmpty' => true],
             'sql'       => 'int(5) NULL',
         ],
-        'vectors' => [
+        'vectors'                        => [
             'inputType' => 'textarea',
             'eval'      => [
                 'rte'               => 'ace|json',

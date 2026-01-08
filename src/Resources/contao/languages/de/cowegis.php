@@ -59,6 +59,8 @@ $GLOBALS['TL_LANG']['cowegis_vector']['polyline']['1']      = 'Polyline.Overlay.
 $GLOBALS['TL_LANG']['cowegis_vector']['rectangle']['0']     = 'Rechteck';
 $GLOBALS['TL_LANG']['cowegis_vector']['rectangle']['1']     = 'Rechteckiges Overlay. Lesen Sie für mehr Details den Artikel in der  <a href="http://leafletjs.com/reference.html#rectangle" target="_blank">Leaflet-Dokumentation</a>.';
 
+$GLOBALS['TL_LANG']['cowegis_style']['fixed'][0] = 'Festgelegt';
+$GLOBALS['TL_LANG']['cowegis_style']['fixed'][1] = 'Feste Stilmuster auf jeden Vektor anwenden.';
 
 $GLOBALS['TL_LANG']['cowegis_icon']['svg'][0] = 'SVG icon';
 $GLOBALS['TL_LANG']['cowegis_icon']['svg'][1] = 'SVG icon';
